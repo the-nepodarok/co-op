@@ -4,6 +4,12 @@
 @import "global/global.scss";
 @import "global/fonts.scss";
 
+
+
 /*	Blocks	*/
 
+@import 'blocks/page-header.scss';
+@import 'blocks/main-nav.scss';
+@import 'blocks/picture-board.scss';
 @import "blocks/page-footer";
+
