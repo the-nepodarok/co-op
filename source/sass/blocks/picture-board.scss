@@ -1,7 +1,11 @@
 .picture-board {
+    display: block;
     width: 320px;
-    height: 437px;
+    height: 477px;
+    background-image: url('../img/group-8.png');
+    background-repeat: no-repeat;
     background-color: $cat-green;
+    text-align: center;
     color: $white-text;
 }
 
@@ -12,5 +16,7 @@
 .picture-board__button {
     padding: 9px 50px;
     background-color: $cat-green;
-
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white-text;
 }
