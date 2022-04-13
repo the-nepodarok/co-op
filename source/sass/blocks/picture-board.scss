@@ -1,6 +1,9 @@
 .picture-board {
+    display: block;
     width: 320px;
     height: 437px;
+    background-image: url('../img/group-8.png');
+    background-repeat: no-repeat;
     background-color: $cat-green;
     color: $white-text;
 }
