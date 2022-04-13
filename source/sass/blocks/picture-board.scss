@@ -1,3 +1,16 @@
 .picture-board {
+    width: 320px;
+    height: 437px;
+    background-color: $cat-green;
     color: $white-text;
+}
+
+.picture-board__title {
+    text-transform: uppercase;
+}
+
+.picture-board__button {
+    padding: 9px 50px;
+    background-color: $cat-green;
+
 }
