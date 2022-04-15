@@ -1,0 +1,52 @@
+.example {
+  padding: 20px;
+  background-color: $bg-grey;
+}
+
+.example__title {
+  font-size: 36px;
+  margin: 5px 0;
+}
+
+.exampe__desc {
+  font: 14px Arial, sans-serif;
+  line-height: 18px;
+  padding-bottom: 25px;
+}
+
+.example-calc {
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-rows: 64px 1fr;
+  grid-template-columns: 124px 124px;
+  column-gap: 30px;
+  row-gap: 25px;
+}
+
+.example-calc__text {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  align-self: center;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid $special-grey;
+}
+
+.example-calc__result {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.example-change__desc {
+  font: 16px Oswald, sans-serif;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+}

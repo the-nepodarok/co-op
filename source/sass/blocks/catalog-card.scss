@@ -3,8 +3,6 @@
   padding: 20px 20px;
   margin-bottom: 20px;
   background-color: $footer-grey;
-
-
 }
 
 .catalog-card__title {
@@ -12,4 +10,17 @@
   line-height: 37px;
   margin: 0;
   margin-bottom: 21px;
+}
+
+.catalog-card__description {
+  font: 14px Arial, sans-serif;
+  line-height: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $borderline-grey;
+}
+
+.catalog-card__catalog-link {
+  font-size: 16px;
+  line-height: 16px;
+  padding-top: 15px;
 }
