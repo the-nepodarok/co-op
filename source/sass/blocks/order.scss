@@ -1,0 +1,80 @@
+.order {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+}
+
+.order-form__title {
+  text-transform: none;
+  font-size: 36px;
+  line-height: 36px;
+  margin-left: 20px;
+}
+
+.order-form__desc {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.order-form fieldset {
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid $borderline-grey;
+}
+
+.order-form label {
+  color: $dark-grey;
+}
+
+.order-form__cat-reason label {
+  color: $dark-grey2;
+}
+
+.order-form input {
+  border: 1px solid $borderline-grey;
+}
+
+.order-form input[type="text"],
+.order-form input[type="number"] {
+  padding: 14px;
+}
+
+.order-form__comment input[type="textarea"] {
+  width: 280px;
+  height: 150px;
+}
+
+.order-form input::placeholder {
+  color: $dark-grey;
+  text-transform: uppercase;
+}
+
+.order-form__legend {
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+}
+
+.order-form__legend::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 136px;
+  height: 2px;
+  margin-left: 20px;
+  background-color: $cat-green;
+}
+
+.button {
+  font-size: 16px;
+  color: $white-text;
+  text-transform: uppercase;
+  padding: 7px 40px;
+  background-color: $cat-green;
+  border: none;
+}
+
+.order-form__small-text {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+}

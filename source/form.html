@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
 
 <head>
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -37,8 +37,8 @@
 
 			<fieldset class="order-form__cat-info">
 				<label>Имя:* <input type="text" required name="cat-name"></label>
-				<label>Вес (кг):* <input type="number" value="7" required name="current-weight"></label>
-				<label>Возраст (лет): <input type="number" value="7" name="age"></label>
+				<label>Вес (кг):* <input type="number" placeholder="7" required name="current-weight"></label>
+				<label>Возраст (лет): <input type="number" placeholder="7" name="age"></label>
 			</fieldset>
 
 			<fieldset class="order-form__cat-reason">
@@ -49,8 +49,8 @@
 
 			<fieldset class="order-form__owner-info">
 				<legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-				<label>E-mail:* <input type="text" value="kuklachev@gmail.com" name="owner-mail" required></label>
-				<label>Телефон:* <input type="number" value="89609006090" required name="owner-phone"></label>
+				<label>E-mail:* <input type="text" placeholder="kuklachev@gmail.com" name="owner-mail" required></label>
+				<label>Телефон:* <input type="number" placeholder="89609006090" required name="owner-phone"></label>
 			</fieldset>
 
 
@@ -65,14 +65,14 @@
 
 			<fieldset class="order-form__supplement">
 				<legend class="order-form__legend">Дополнительно</legend>
-				<input type="checkbox" name="order-form__supplement--sweetener" checked></input>
-				<input type="checkbox" name="order-form__supplement--drinking-water"></input>
-				<input type="checkbox" name="order-form__supplement--milk"></input>
-				<input type="checkbox" name="order-form__supplement--vitamins"></input>
+				<input type="checkbox" name="order-form__supplement--sweetener" checked>Сахарозаменитель</input>
+				<input type="checkbox" name="order-form__supplement--drinking-water">Питьевая вода</input>
+				<input type="checkbox" name="order-form__supplement--milk">Молоко</input>
+				<input type="checkbox" name="order-form__supplement--vitamins">Витамины</input>
 			</fieldset>
 
 			<button class="order-form__submit-button button" type="submit">Отправить заявку</button>
-			<small><sup>*</sup> - Обязательное поле</small>
+			<small class="order-form__small-text"><sup>*</sup> - Обязательное поле</small>
 		</form>
 	</section>
 
