@@ -1,12 +1,15 @@
 .picture-board {
     display: block;
+    height: 410px;
     width: 320px;
-    height: 477px;
-    background-image: url('../img/group-8.png');
+    background-image: url('../img/group-9.jpg');
     background-repeat: no-repeat;
     background-color: $cat-green;
     text-align: center;
     color: $white-text;
+    padding-top: 27px;  
+    font-family: "Oswald", sans-serif; 
+    font-weight: 400;
 }
 
 .picture-board__title {
@@ -14,9 +17,8 @@
 }
 
 .picture-board__button {
-    padding: 9px 50px;
+    padding: 11px 45px;
     background-color: $cat-green;
-    font-weight: bold;
     text-transform: uppercase;
     color: $white-text;
 }
