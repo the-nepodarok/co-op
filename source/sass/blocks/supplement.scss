@@ -1,0 +1,59 @@
+.supplement {
+    font-family: "Oswald", sans-serif;
+    padding-top: 25px;
+    padding-bottom: 18px;
+}
+
+.supplement__heading {
+    margin: 0;
+    margin-bottom: 36px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 24px;
+
+}
+
+.supplement-list {
+    margin: 0;
+    margin-bottom: 150px;
+    padding: 0;
+}
+
+.supplement-list__item {
+    padding-top: 13px;
+
+    &-name {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 13px;
+    }
+
+}
+
+.supplemental-list__table {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.supplement-list__item-price {
+    margin: 0;
+    padding: 0;
+}
+
+.supplement__order-button {
+    padding: 10px 109px;
+    background-color: $cat-green;
+    text-transform: uppercase;
+    color: $white-text;
+    border: none;
+    font-family: "Oswald", semi-serif;
+}
+
+.supplement-gift-offer {
+    width: 280px;
+    height: 289px;
+    background-image: url("../img/gift-mobile.jpg");
+    background-repeat: no-repeat;
+    background-color: $cat-energy;
+}
