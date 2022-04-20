@@ -3,7 +3,7 @@
   display: inline-block;
   width: 25px;
   height: 22px;
-  background: url('../../img/social_icons.png');
+  background: url("../../img/social_icons.png") no-repeat;
 }
 
 .footer__socials_vk {
@@ -17,3 +17,4 @@
 .footer__socials_fb {
   background-position: 100%;
 }
+
