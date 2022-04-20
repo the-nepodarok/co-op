@@ -1,64 +1,64 @@
 .catalog {
-    padding-top: 27px;
-    font-family: "Oswald", semi-serif;
+  padding-top: 27px;
+  font-family: "Oswald", sans-serif;
 }
 
 .catalog__title {
-    margin: 0;
-    margin-bottom: 35px;
-    padding: 0;
-    font-size: 36px;
-    line-height: 36px;
-    font-family: "Oswald", semi-serif;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: "Oswald", sans-serif;
 }
 
 .catalog__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog__item {
-    padding-top: 18px;
-    padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 20px;
 
-    &--more {
-        padding-top: 77px;
-        position: relative;
-        text-align: center;
+  &--more {
+    padding-top: 77px;
+    position: relative;
+    text-align: center;
 
-        &::before {
-            content:"";
-            width: 30px;
-            height: 30px;
-            background-color: $special-grey;
-            position: absolute;
-            top: 25px;
-        }
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-color: $special-grey;
+      position: absolute;
+      top: 25px;
     }
+  }
 }
 
 .catalog__item__title {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 18px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 18px;
 }
 
 .catalog__item__table {
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 .catalog__button {
-    padding: 10px 109px;
-    background-color: $cat-green;
-    text-transform: uppercase;
-    color: $white-text;
-    border: none;
-    font-family: "Oswald", semi-serif;
+  padding: 10px 109px;
+  background-color: $cat-green;
+  text-transform: uppercase;
+  color: $white-text;
+  border: none;
+  font-family: "Oswald", sans-serif;
 
-    &--show-all {
-        background-color: $footer-grey;
-        color: $dark-grey;
-        font-weight: 400;
-    }
+  &--show-all {
+    background-color: $footer-grey;
+    color: $dark-grey;
+    font-weight: 400;
+  }
 }
