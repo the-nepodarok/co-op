@@ -9,14 +9,14 @@
 }
 
 .exampe__desc {
-  font: 14px Arial, sans-serif;
+  font: 14px "Arial", sans-serif;
   line-height: 18px;
   padding-bottom: 25px;
 }
 
 .example-calc {
   text-transform: uppercase;
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
   margin-bottom: 40px;
   display: grid;
   grid-template-rows: 64px 1fr;
@@ -44,7 +44,7 @@
 }
 
 .example-change__desc {
-  font: 16px Oswald, sans-serif;
+  font: 16px "Oswald", sans-serif;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
