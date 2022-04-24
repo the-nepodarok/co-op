@@ -3,14 +3,35 @@
   font-weight: 500;
   font-size: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  @media (min-width: $desktop-width) {
+    min-width: 202px;
+  }
+  @media (min-width: $tablet-width) {
+    min-width: 174px;
+  }
 }
+
 
 .page-header__title {
   font-family: "Oswald", sans-serif;
@@ -19,6 +40,8 @@
 }
 
 .page-header__button {
+  width: 18px;
+  height: 18px;
 @media (min-width: $tablet-width), (min-width: $desktop-width) {
   display: none;
 }
