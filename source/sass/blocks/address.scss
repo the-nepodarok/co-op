@@ -43,7 +43,7 @@
   grid-column: 1 / -1;
   background-image: url("../../img/address/map-small.png");
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     min-height: 400px;
     display: grid;
     background-image: url("../../img/address/map-mid-size.png");

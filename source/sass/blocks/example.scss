@@ -20,7 +20,6 @@
     font-size: 60px;
     margin-bottom: 146px;
   }
-
 }
 
 .exampe__desc {
@@ -40,7 +39,6 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
-
 }
 
 .example-calc {
@@ -73,7 +71,7 @@
   padding: 13px 40px;
   border: 1px solid $special-grey;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: 30px;
     line-height: 30px;
   }
@@ -131,7 +129,6 @@
 }
 
 .example-change {
-
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;

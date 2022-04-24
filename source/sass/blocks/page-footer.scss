@@ -1,23 +1,28 @@
 .page-footer {
-  height: 236px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 236px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   font-family: "Oswald", sans-serif;
   background: $footer-grey;
-  padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
   }
-
 }
 
 .page-footer__logo {
+  margin-bottom: 32px;
   width: 128px;
   height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__socials,
@@ -35,9 +40,10 @@
 }
 
 .page-footer__socials {
+  padding: 10px 0;
   display: flex;
   justify-content: space-evenly;
-  height: 50px;
+  height: 63px;
 
   @media (min-width: $tablet-width) {
     min-width: 129px;
@@ -58,14 +64,13 @@
   }
 }
 
-
-
 .footer__socials {
   display: inline-block;
   width: 25px;
   height: 22px;
-  background: url("../../img/social_icons.png") no-repeat;
+  background: url("../img/social_icons.png") no-repeat;
   color: black;
+  align-self: center;
 }
 
 .footer__socials--vk {
@@ -79,4 +84,3 @@
 .footer__socials--fb {
   background-position: 100%;
 }
-
