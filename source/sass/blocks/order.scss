@@ -1,13 +1,13 @@
 .order {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  padding: 0 9.45%;
 }
 
 .order-form__title {
   text-transform: none;
   font-size: 36px;
   line-height: 36px;
-  margin-left: 20px;
 }
 
 .order-form__desc {
@@ -19,10 +19,19 @@
   margin-bottom: 25px;
   border: none;
   border-bottom: 1px solid $borderline-grey;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 .order-form label {
   color: $dark-grey;
+  display: flex;
+  column-gap: 2%;
+}
+
+.order-form__item-label {
+  flex-shrink: 0;
 }
 
 .order-form__cat-reason label {
@@ -36,6 +45,7 @@
 .order-form input[type="text"],
 .order-form input[type="number"] {
   padding: 14px;
+  width: 100%;
 }
 
 .order-form__comment input[type="textarea"] {
