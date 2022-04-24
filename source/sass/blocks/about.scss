@@ -1,7 +1,7 @@
 .about {
-  font-family: "Oswald", sans-serif;
   padding-top: 28px;
   min-width: 320px;
+  font-family: "Oswald", sans-serif;
 
   @media(min-width: $tablet-width) {
     min-width: 708px;
@@ -30,23 +30,32 @@
   padding-top: 35px;
   padding-bottom: 25px;
   list-style: none;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
 
   @media(min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 616px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-
+  @media(min-width: $desktop-width) {
+    min-width: 1219px;
+  }
 }
 
 .about__list__item {
   padding: 0;
+  padding-top: 5px;
   margin: 0;
   margin-bottom: 24px;
   margin-left: 80px;
   position: relative;
+  min-height: 55px;
 
   &::before {
     content: "";
@@ -59,7 +68,6 @@
     @media(min-width: $tablet-width) {
       left: 0;
       top: 31px;
-
     }
   }
 
