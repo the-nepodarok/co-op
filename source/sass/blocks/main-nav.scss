@@ -1,13 +1,26 @@
+
+
 .main-nav__list {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   list-style: none;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    min-width: 440px;
+    justify-content: space-between;
+    font-family: "Oswald", sans-serif;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 478px;
+  }
 }
 
 .main-nav__item {
   padding: 20px 0;
-}
-
-.main-nav__button {
-  width: 18px;
-  height: 18px;
 }
