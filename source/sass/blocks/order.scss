@@ -15,7 +15,7 @@
   line-height: 18px;
 }
 
-.order-form fieldset {
+form fieldset {
   margin-bottom: 25px;
   border: none;
   border-bottom: 1px solid $borderline-grey;
@@ -62,16 +62,35 @@
   font-size: 24px;
   line-height: 26px;
   position: relative;
+  padding-bottom: 55px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    width: 40%;
+    height: 2px;
+    margin-left: 20px;
+    background-color: $cat-green;
+  }
 }
 
-.order-form__legend::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  width: 136px;
-  height: 2px;
-  margin-left: 20px;
-  background-color: $cat-green;
+.order-form__supplement {
+  max-width: 565px;
+  display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+  row-gap: 25px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.order-form__checkbox-label {
+  width: 50%;
+  display: inline-block;
 }
 
 .button {
