@@ -1,25 +1,41 @@
-.catalog-card {
+.food-program {
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+  }
+}
+
+.food-program-card {
   width: 87.5%;
   padding: 6.25%;
   margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
   background-color: $footer-grey;
+
+  @media (min-width: $desktop-width) {
+    width: 32.5%;
+    padding: 50px;
+  }
 }
 
-.catalog-card__title {
+.food-program-card__title {
   font: normal 24px "Oswald", sans-serif;
   line-height: 37px;
   margin: 0;
   margin-bottom: 21px;
 }
 
-.catalog-card__description {
+.food-program-card__description {
   font: 14px "Arial", sans-serif;
   line-height: 18px;
   padding-bottom: 20px;
   border-bottom: 1px solid $borderline-grey;
 }
 
-.catalog-card__catalog-link {
+.food-program-card__catalog-link {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   text-transform: uppercase;

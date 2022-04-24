@@ -4,12 +4,16 @@
   padding: 0;
   padding-top: 25px;
   width: 100%;
-  background-image: url("../img/group-9.jpg");
-  background-repeat: no-repeat;
   text-align: center;
   color: $white-text;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
+  background-image: url("../img/group-9.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+  }
 }
 
 .picture-board__title {
@@ -19,10 +23,6 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-
-  /*@media (min-width: $tablet-width) {
-    color: $black;
-  }*/
 }
 
 .picture-board__desc {
