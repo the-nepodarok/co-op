@@ -5,14 +5,17 @@
   text-transform: uppercase;
 }
 
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
 .page-header__title {
   font-family: "Oswald", sans-serif;
   padding: 0;
   margin: 0;
-}
-
-.page-header__logo {
-  height: 38px;
 }
 
 .page-header__button {
