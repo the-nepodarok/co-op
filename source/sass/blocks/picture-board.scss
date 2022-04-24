@@ -1,9 +1,9 @@
 .picture-board {
   margin: 0;
+  margin-bottom: 32px;
   padding: 0;
   padding-top: 25px;
-  height: 480px;
-  width: 320px;
+  width: 100%;
   background-image: url("../img/group-9.jpg");
   background-repeat: no-repeat;
   text-align: center;
@@ -34,6 +34,7 @@
 
 .picture-board__button {
   padding: 11px 45px;
+  margin-bottom: 15px;
   background-color: $cat-green;
   text-transform: uppercase;
   color: $white-text;

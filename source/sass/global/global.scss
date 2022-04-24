@@ -1,6 +1,11 @@
 .page__body {
   max-width: 320px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+  }
 }
 
 h1,
@@ -10,7 +15,6 @@ h3 {
 }
 
 a {
-  font-family: "Oswald", sans-serif;
   text-decoration: none;
   color: $black;
 }

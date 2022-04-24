@@ -1,6 +1,6 @@
 .catalog-card {
-  width: 206px;
-  padding: 20px 20px;
+  width: 87.5%;
+  padding: 6.25%;
   margin-bottom: 20px;
   background-color: $footer-grey;
 }
@@ -20,7 +20,9 @@
 }
 
 .catalog-card__catalog-link {
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
+  text-transform: uppercase;
   line-height: 16px;
   padding-top: 15px;
 }
