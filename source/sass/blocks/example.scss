@@ -2,12 +2,24 @@
   margin: 0;
   padding: 27px 20px;
   background-color: $bg-grey;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 436px 1fr;
+    grid-template-rows: 206px 165px auto;
+    column-gap: 134px;
+  }
 }
 
 .example__title {
   font-size: 36px;
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+    margin-bottom: 146px;
+  }
 }
 
 .exampe__desc {
@@ -22,6 +34,11 @@
     line-height: 24px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .example-calc {
@@ -29,6 +46,7 @@
   font-family: "Oswald", sans-serif;
   margin-bottom: 42px;
   display: grid;
+  grid-template-columns: 124px 124px;
   grid-template-rows: 75px 1fr;
   column-gap: 30px;
   row-gap: 20px;
@@ -36,6 +54,11 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 124px 124px 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 162px 162px;
+    row-gap: 55px;
   }
 }
 
@@ -47,6 +70,11 @@
   margin: 0;
   padding: 13px 40px;
   border: 1px solid $special-grey;
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 
   &--days {
     padding: 13px 20px;
@@ -62,8 +90,17 @@
       bottom: 18px;
     }
 
+    @media (min-width: $desktop-width) {
+      bottom: 78px;
+      left: 45px;
+    }
+
     &--right {
       left: 168px;
+
+      @media (min-width: $desktop-width) {
+        left: 220px;
+      }
     }
   }
 }
@@ -79,14 +116,35 @@
   @media (min-width: $tablet-width) {
     grid-column-start: 3;
     grid-column-end: 4;
-    justify-self: end;
+    text-align: end;
+    font-size: 20px;
+    line-height: 20px;
   }
 
+  @media (min-width: $desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+  }
+}
 
+.example-change {
+  @media (min-width: $desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .example-change__picture {
   margin-bottom: 23px;
+
+  @media (min-width: $desktop-width) {
+    min-height: 536px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 
 .example-change__desc {
@@ -103,4 +161,10 @@
   min-width: 228px;
   display: flex;
   justify-content: space-around;
+  align-self: center;
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }

@@ -24,9 +24,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   @media (min-width: $desktop-width) {
     min-width: 202px;
   }
+
   @media (min-width: $tablet-width) {
     min-width: 174px;
   }
@@ -42,7 +44,8 @@
 .page-header__button {
   width: 18px;
   height: 18px;
-@media (min-width: $tablet-width), (min-width: $desktop-width) {
-  display: none;
-}
+
+  @media (min-width: $tablet-width), (min-width: $desktop-width) {
+    display: none;
+  }
 }

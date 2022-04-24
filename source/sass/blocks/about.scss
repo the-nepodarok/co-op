@@ -3,11 +3,11 @@
   min-width: 320px;
   font-family: "Oswald", sans-serif;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     min-width: 708px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     min-width: 1220px;
   }
 }
@@ -18,7 +18,7 @@
   font-size: 36px;
   line-height: 40px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -34,7 +34,7 @@
   font-size: 14px;
   line-height: 18px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@
     line-height: 24px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     min-width: 1219px;
   }
 }
@@ -65,13 +65,13 @@
     position: absolute;
     left: -80px;
 
-    @media(min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       left: 0;
       top: 31px;
     }
   }
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     width: 250px;
     height: 130px;
