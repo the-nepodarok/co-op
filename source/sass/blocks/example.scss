@@ -1,28 +1,42 @@
 .example {
-  padding: 20px;
+  margin: 0;
+  padding: 27px 20px;
   background-color: $bg-grey;
 }
 
 .example__title {
   font-size: 36px;
-  margin: 5px 0;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .exampe__desc {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
   font: 14px "Arial", sans-serif;
   line-height: 18px;
-  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
 }
 
 .example-calc {
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   display: grid;
-  grid-template-rows: 64px 1fr;
-  grid-template-columns: 124px 124px;
+  grid-template-rows: 75px 1fr;
   column-gap: 30px;
-  row-gap: 25px;
+  row-gap: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 124px 124px 1fr;
+  }
 }
 
 .example-calc__text {
@@ -31,8 +45,27 @@
   text-align: center;
   align-self: center;
   margin: 0;
-  padding: 10px;
+  padding: 13px 40px;
   border: 1px solid $special-grey;
+
+  &--days {
+    padding: 13px 20px;
+  }
+
+  &--small {
+    text-transform: lowercase;
+    position: absolute;
+    left: 24px;
+    bottom: 38px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 18px;
+    }
+
+    &--right {
+      left: 168px;
+    }
+  }
 }
 
 .example-calc__result {
@@ -41,12 +74,33 @@
   margin: 0;
   grid-column-start: 1;
   grid-column-end: -1;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    justify-self: end;
+  }
+
+
+}
+
+.example-change__picture {
+  margin-bottom: 23px;
 }
 
 .example-change__desc {
+  margin: 0;
+  padding: 0;
   font: 16px "Oswald", sans-serif;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   display: inline-block;
+}
+
+.example-change__bar {
+  min-width: 228px;
+  display: flex;
+  justify-content: space-around;
 }
