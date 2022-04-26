@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
 <head>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width">
 </head>
 
 <body class="page__body">
-
-  <header class="page-header">
+<header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo"><img src="img/mini-logo.svg" class="page-header__logo-image cat-logo" width="34" height="38"
           alt="Логотип Cat Energy"></a>
@@ -26,14 +24,16 @@
         </ul>
       </div>
     </nav>
-  </header>
+</header>
 
+<main>
   <section class="order">
     <form class="order-form" method="post">
       <h2 class="order-form__title">Подбор программы</h2>
       <p class="order-form__desc">Заполните анкету, и мы подберем
         <br>программу питания для вашего кота</p>
 
+      <div class="order-form__cat-data">
       <fieldset class="order-form__cat-info">
         <label>
           <span class="order-form__item-label">Имя:* </span>
@@ -62,15 +62,16 @@
           <input type="radio" name="radio-reason" value="need help">
         </label>
       </fieldset>
+      </div>
 
       <fieldset class="order-form__owner-info">
         <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-        <label>
+        <label class="order-form__owner-info-label">
           <span class="order-form__item-label">E-mail:*</span>
           <input type="text" value="kuklachev@gmail.com" name="owner-mail" required>
         </label>
 
-        <label>
+        <label class="order-form__owner-info-label">
           <span class="order-form__item-label">Телефон:*</span>
           <input type="number" value="89609006090" required name="owner-phone">
         </label>
@@ -92,9 +93,8 @@
         <input type="checkbox" name="order-form__supplement--vitamins" id="vitamins">
           <label class="order-form__checkbox-label" for="vitamins">Витамины</label>
       </fieldset>
-
       <button class="order-form__submit-button button" type="submit">Отправить заявку</button>
-      <small><sup>*</sup> - Обязательное поле</small>
+      <small class="order-form__small-text"><sup>*</sup> - Обязательное поле</small>
     </form>
   </section>
 
@@ -105,8 +105,9 @@
       <!--<img src="img/address-map.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
     </div>
   </section>
+</main>
 
-  <footer class="page-footer">
+<footer class="page-footer">
     <section class="page-footer__logo">
       <a href="#"><img src="img/cat-energy-logo.svg" width="128" height="24"></a>
     </section>
@@ -120,7 +121,6 @@
     <section class="page-footer__copyright copyright">
       <span class="copyright__academy">HTML Academy</span>
     </section>
-  </footer>
+</footer>
 </body>
-
 </html>

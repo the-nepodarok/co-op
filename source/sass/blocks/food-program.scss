@@ -16,8 +16,9 @@
   background-color: $footer-grey;
 
   @media (min-width: $desktop-width) {
-    width: 32.5%;
-    padding: 50px;
+    width: 39%;
+	min-height: 274px;
+    padding: 4.2%;
   }
 }
 

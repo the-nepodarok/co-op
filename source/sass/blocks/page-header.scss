@@ -6,17 +6,17 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    min-width: 708px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 1220px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 50px 110px 0 0;
+    margin-bottom: 90px;
   }
 }
 

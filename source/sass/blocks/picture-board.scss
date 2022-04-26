@@ -1,18 +1,26 @@
 .picture-board {
+  position: relative;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   padding: 0;
   padding-top: 25px;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   color: $white-text;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
-  background-image: url("../img/group-9.jpg");
+  background-image: url("../img/group-9.png");
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
+    min-height: 810px;
     color: $black;
+    text-align: left;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 500px;
   }
 }
 
@@ -23,6 +31,13 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 85px;
+  }
 }
 
 .picture-board__desc {
@@ -30,6 +45,11 @@
   margin: 0;
   margin-bottom: 300px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding-left: 85px;
+  }
 }
 
 .picture-board__button {
@@ -38,4 +58,31 @@
   background-color: $cat-green;
   text-transform: uppercase;
   color: $white-text;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 85px;
+    top: 255px;
+  }
+}
+
+.picture-board__image {
+  display: none;
+  width: 709px;
+  height: 609px;
+  background: url("../img/group-10.png") no-repeat;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 880px;
+    height: 694px;
+    background: url("../img/group-8.png") 100%, url("../img/desktop-cat.png") 100% no-repeat;
+    position: absolute;
+    top: -205px;
+    right: 0;
+    z-index: -1;
+  }
 }
