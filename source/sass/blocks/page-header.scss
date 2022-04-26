@@ -1,4 +1,6 @@
 .page-header {
+  padding-left: 20px;
+  padding-right: 19px;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -6,6 +8,8 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
