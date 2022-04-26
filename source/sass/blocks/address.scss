@@ -1,15 +1,30 @@
 .address {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
-  row-gap: 25px;
-  align-items: center;
-  padding-top: 24px;
-  padding-bottom: 0;
+  padding-top: 66px;
+
+  &--catalog {
+    padding-top: 20px;
+  }
 
   @media (min-width: $desktop-width) {
-    max-width: 570px;
-    position: absolute;
+    padding-top: 0;
+    position: relative;
+   }
+}
+
+.address__block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 51px;
+
+  @media (min-width: $desktop-width) {
+   position: absolute;
+   background-color: $white-text;
+   padding-top: 66px;
+   padding-right: 89px;
+   padding-bottom: 60px;
+   padding-left: 76px;
+   top: 95px;
+   left: 111px;
   }
 }
 
@@ -25,6 +40,13 @@
   text-transform: uppercase;
   color: $black;
   padding-left: 13.5%;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 21px;
+    padding: 0;
+    margin-right: 87px;
+  }
 }
 
 .address__location {
@@ -34,7 +56,13 @@
   padding-right: 13.5%;
 
   @media (min-width: $tablet-width) {
-    justify-self: end;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    padding: 0;
+    justify-self: center;
   }
 }
 
