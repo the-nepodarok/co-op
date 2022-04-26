@@ -10,7 +10,11 @@
     padding-right: 30px;
   }
 
-
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .catalog__title {
@@ -30,12 +34,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
-
-
+    justify-content:space-evenly;
   }
 }
 
@@ -55,6 +58,12 @@
     padding-bottom: 40px;
     padding-left: 36px;
     margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 35px;
+    min-width: 180px;
   }
 
   &--more {
@@ -141,7 +150,7 @@
 }
 
 .catalog__button {
-  padding: 10px 109px;
+  padding: 10px 88px;
   background-color: $cat-green;
   grid-column: 1/3;
   text-transform: uppercase;
@@ -153,5 +162,10 @@
     background-color: $footer-grey;
     color: $dark-grey;
     font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+      padding: 9px 40px;
+    }
+
   }
 }

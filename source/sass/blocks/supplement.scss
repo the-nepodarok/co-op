@@ -4,6 +4,19 @@
   padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 19px;
+
+  @media(min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media(min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 79px;
+    padding-right: 110px;
+    padding-left: 110px;
+    padding-bottom: 83px;
+  }
 }
 
 .supplement__heading {
@@ -12,12 +25,25 @@
   padding: 0;
   font-size: 24px;
   line-height: 24px;
+
+  @media(min-width: $tablet-width) {
+    padding-left: 38px;
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
 }
 
 .supplement-list {
   margin: 0;
   margin-bottom: 39px;
   padding: 0;
+
+  @media(min-width: $desktop-width) {
+    width: 896px;
+    grid-row: 2/3;
+  }
 }
 
 .supplement-list__item {
@@ -25,6 +51,21 @@
   flex-direction: column;
   padding-top: 13px;
   margin-bottom: 13px;
+
+  @media(min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-top: 26px;
+    padding-right: 38px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: 15px 0;
+    margin: 0;
+    align-items: center;
+  }
 
   &-name {
     margin: 0;
@@ -35,13 +76,25 @@
 
 .supplement-list__table {
   display: flex;
-  justify-content: space-between;
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-content:space-between;
+  }
+
+  @media(min-width: $desktop-width) {
+    grid-column: 2/3;
+    min-width: 288px;
+    margin: 0;
+    margin-right: 40px;
+  }
+
+
 }
 
 .supplement-list__item-name {
@@ -49,11 +102,40 @@
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 13px;
+
+  @media(min-width: $desktop-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.supplement-list__item-package {
+  margin: 0;
+  padding: 0;
+
+  @media(min-width: $tablet-width) {
+    margin-bottom: 23px;
+    margin-right: 55px;
+    justify-self: end;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .supplement-list__item-price {
   margin: 0;
   padding: 0;
+
+  @media(min-width: $tablet-width) {
+    justify-self: end;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .supplement__order-button {
@@ -63,12 +145,21 @@
   color: $white-text;
   border: none;
   font-family: "Oswald", sans-serif;
+
+  @media(min-width: $tablet-width) {
+    grid-column: 1/3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/4;
+    padding: 10px 109px;
+  }
 }
 
 .supplement-gift-offer {
   margin: 0;
   width: 161px;
-  height: 76px;
+  height: 67px;
   padding-top: 180px;
   padding-bottom: 43px;
   padding-right: 58px;
@@ -78,6 +169,24 @@
   background-repeat: no-repeat;
   background-color: $cat-green;
   position: relative;
+
+  @media(min-width: $tablet-width) {
+    height: auto;
+    min-width: 648px;
+    padding: 100px 30px;
+
+  }
+
+  @media(min-width: $desktop-width) {
+    height: 67px;
+    padding-top: 180px;
+    padding-right: 45px;
+    padding-bottom: 43px;
+    padding-left: 41px;
+    min-width: 161px;
+    margin-bottom: 0;
+    grid-row: 2/3;
+  }
 
   &::before {
     content: "";
