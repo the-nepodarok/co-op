@@ -5,10 +5,14 @@
   font-family: "Oswald", sans-serif;
 
   @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
     padding-top: 74px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
     padding-top: 74px;
   }
 }
