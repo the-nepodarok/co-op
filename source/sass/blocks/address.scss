@@ -8,7 +8,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 0;
     position: relative;
-   }
+  }
 }
 
 .address__block {
@@ -17,14 +17,14 @@
   margin-bottom: 51px;
 
   @media (min-width: $desktop-width) {
-   position: absolute;
-   background-color: $white-text;
-   padding-top: 66px;
-   padding-right: 89px;
-   padding-bottom: 60px;
-   padding-left: 76px;
-   top: 95px;
-   left: 111px;
+    position: absolute;
+    background-color: $white-text;
+    padding-top: 66px;
+    padding-right: 89px;
+    padding-bottom: 60px;
+    padding-left: 76px;
+    top: 95px;
+    left: 111px;
   }
 }
 
@@ -50,7 +50,6 @@
   }
 
   &--catalog {
-
     @media (min-width: $tablet-width) {
       padding-left: 9%;
     }
