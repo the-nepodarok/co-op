@@ -13,7 +13,7 @@
 
 .address__block {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   margin-bottom: 51px;
 
   @media (min-width: $desktop-width) {
@@ -33,14 +33,14 @@
 }
 
 .address__invite {
+  margin-right: 15px;
+  padding-left: 9.5%;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $black;
-  padding-left: 13.5%;
-
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
@@ -62,9 +62,10 @@
 
 .address__location {
   font-family: "Arial", sans-serif;
+  font-size: 14px;
   line-height: 20px;
   color: $dark-grey;
-  padding-right: 13.5%;
+  padding-right: 9.5%;
 
   @media (min-width: $tablet-width) {
     text-align: end;
@@ -74,6 +75,7 @@
     text-align: start;
     padding: 0;
     justify-self: center;
+    font-size: 16px;
   }
 }
 
