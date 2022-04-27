@@ -68,7 +68,6 @@
 }
 
 .order-form__cat-info {
-
   @media (min-width: $tablet-width) {
     min-width: 569px;
     margin-right: 66px;
@@ -162,7 +161,7 @@
 
 .order-form__supplement {
   flex-wrap: wrap;
-	flex-direction: row;
+  flex-direction: row;
   row-gap: 25px;
 
   @media (min-width: $desktop-width) {
