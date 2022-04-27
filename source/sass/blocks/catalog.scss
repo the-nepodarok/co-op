@@ -38,7 +38,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
   }
 }
 
@@ -90,7 +90,7 @@
 
       @media (min-width: $tablet-width) {
         top: 52px;
-        }
+      }
     }
   }
 }
@@ -128,7 +128,6 @@
     align-self: center;
     margin-bottom: 23px;
     max-width: 140px;
-
   }
 
   &--bottom {
@@ -139,7 +138,7 @@
     line-height: 16px;
 
     @media (min-width: $tablet-width) {
-    margin-bottom: 87px;
+      margin-bottom: 87px;
     }
   }
 }
@@ -166,6 +165,5 @@
     @media (min-width: $tablet-width) {
       padding: 9px 40px;
     }
-
   }
 }
