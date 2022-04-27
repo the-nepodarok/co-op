@@ -18,7 +18,13 @@
   line-height: 18px;
 }
 
-form fieldset {
+/* Global Form Rules */
+
+.order-form input[type="checkbox"] {
+    display: none;
+  }
+
+.order-form fieldset {
   padding: 0;
   margin-bottom: 25px;
   border: none;
@@ -33,6 +39,23 @@ form fieldset {
   display: flex;
   column-gap: 2%;
 }
+
+.order-form input {
+  border: 1px solid $borderline-grey;
+}
+
+.order-form input[type="text"],
+.order-form input[type="number"] {
+  padding: 14px;
+  flex-grow: 1;
+}
+
+.order-form input::placeholder {
+  color: $dark-grey;
+  text-transform: uppercase;
+}
+
+/* Form Field Groups */
 
 .order-form__cat-data {
   margin-bottom: 20px;
@@ -95,18 +118,8 @@ form fieldset {
   max-width: 550px;
 
   @media (min-width: $desktop-width) {
-    min-width: 566px
+    min-width: 566px;
   }
-}
-
-.order-form input {
-  border: 1px solid $borderline-grey;
-}
-
-.order-form input[type="text"],
-.order-form input[type="number"] {
-  padding: 14px;
-  flex-grow: 1;
 }
 
 .order-form__comment {
@@ -118,11 +131,6 @@ form fieldset {
   min-width: 280px;
   max-width: 1200px;
   height: 150px;
-}
-
-.order-form input::placeholder {
-  color: $dark-grey;
-  text-transform: uppercase;
 }
 
 .order-form__legend {
@@ -156,10 +164,6 @@ form fieldset {
   flex-wrap: wrap;
 	flex-direction: row;
   row-gap: 25px;
-
-  input[type="checkbox"] {
-    display: none;
-  }
 
   @media (min-width: $desktop-width) {
     max-width: 1200px;
