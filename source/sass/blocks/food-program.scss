@@ -37,6 +37,7 @@
 }
 
 .food-program-card__catalog-link {
+  display: flex;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -44,8 +45,34 @@
   padding-top: 15px;
 }
 
-.food-program-card__catalog-link a {
-  &:active {
-    opacity: 0.3;
-  }
+.food-program-card__catalog-link::before {
+  content: "";
+  order: 2;
+  align-self: center;
+  width: 18px;
+  height: 2px;
+  margin-top: 1px;
+  margin-left: 15px;
+  background: $black;
+}
+
+.food-program-card__catalog-link::after {
+  content: "";
+  order: 3;
+  width: 0px;
+  height: 0px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid $black;
+  margin-top: 3.5px;
+}
+
+.food-program-card__catalog-name:hover .food-program-card__catalog-link::before {
+  width: 26px;
+}
+
+.food-program-card__catalog-name:active,
+.food-program-card__catalog-name:active .food-program-card__catalog-link::before,
+.food-program-card__catalog-name:active .food-program-card__catalog-link::after {
+  opacity: 0.3;
 }

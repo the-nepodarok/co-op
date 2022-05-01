@@ -60,11 +60,13 @@
 
   &::before {
     content: "";
+    position: absolute;
+    left: -80px;
     width: 60px;
     height: 60px;
     background-color: $cat-green;
-    position: absolute;
-    left: -80px;
+	background-image: url("../img/about/about__list__items.svg");
+	background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
       left: 0;
@@ -79,6 +81,22 @@
     margin: 0;
     padding-top: 151px;
   }
+}
+
+.about__list__item--good::before {
+  background-position: 50% -6%;
+}
+
+.about__list__item--simple::before {
+  background-position: 50% 30%;
+}
+
+.about__list__item--nutritious::before {
+  background-position: 50% 68.5%;
+}
+
+.about__list__item--fast::before {
+  background-position: 50% 106%;
 }
 
 .about__list__desc {

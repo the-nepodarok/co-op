@@ -9,12 +9,11 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo"><img src="img/mini-logo.svg" class="page-header__logo-image cat-logo" width="34"
-          height="38" alt="Логотип Cat Energy"></a>
-      <a class="page-header__logo"><img src="img/logo-text.svg" class="page-header__logo-name cat-logo" width="101"
-          height="18" alt="Логотип Cat Energy"></a>
-      <button class="page-header__button" type="button"><span class="visually-hidden">Закрыть меню
-          навигации</span></button>
+      <a class="page-header__logo"></a>
+      <a class="page-header__logo-text"><img src="img/logo-text.svg" class="page-header__logo-name cat-logo" width="101" height="18" alt="Логотип Cat Energy"></a>
+      <button class="page-header__button menu-opened" type="button">
+        <span class="visually-hidden">Закрыть меню навигации</span>
+      </button>
       <h1 class="page-header__title visually-hidden">Cat Energy</h1>
     </div>
     <nav class="main-nav main-nav--index">
@@ -28,13 +27,40 @@
     </nav>
   </header>
 
-  <main>
-    <div class="picture-board">
-      <h2 class="picture-board__title">Функциональное <br>питание для котов</h2>
-      <p class="picture-board__desc">Занялся собой? Займись котом!</p>
-      <a href="#" class="picture-board__button button">Подобрать программу</a>
-      <div class="picture-board__image"></div>
+<main>
+  <div class="picture-board">
+    <h2 class="picture-board__title">Функциональное <br>питание для котов</h2>
+    <p class="picture-board__desc">Занялся собой? Займись котом!</p>
+    <a href="#" class="picture-board__button button">Подобрать программу</a>
+    <div class="picture-board__image"></div>
+  </div>
+
+  <section class="food-program">
+    <h2 class="visually-hidden"></h2>
+    <div class="food-program-card">
+      <h3 class="food-program-card__title food-program-card__title--fitness">ПОХУДЕНИЕ</h2>
+        <div class="food-program-card__description">
+          Ваш кот весит больше собаки и почти
+          утратил способность лазить по деревьям?
+          Пора на диету! Cat Energy Slim поможет
+          вашему питомцу сбросить лишний вес.
+        </div>
+        <div class="food-program-card__catalog-name">
+          <a class="food-program-card__catalog-link" href="#">Каталог SLIM</a>
+        </div>
     </div>
+    <div class="food-program-card">
+      <h3 class="food-program-card__title food-program-card__title--gaining">НАБОР МАССЫ</h2>
+        <div class="food-program-card__description">
+          Заработать авторитет среди дворовых котов
+          и даже собак? Серия Cat Energy Pro поможет
+          вашему коту нарастить необходимые мышцы!
+        </div>
+        <div class="food-program-card__catalog-name">
+          <a class="food-program-card__catalog-link" href="#">Каталог PRO</a>
+        </div>
+    </div>
+  </section>
 
     <section class="food-program">
       <h2 class="visually-hidden"></h2>
@@ -135,9 +161,10 @@
       <a class="footer__socials footer__socials--fb" href="#"></a>
     </section>
     <section class="page-footer__copyright">
-      <span class="page-footer__copyright--academy">HTML Academy</span>
+      <a class="page-footer__copyright--academy" href="#">HTML Academy</a>
     </section>
-  </footer>
+</footer>
+  <script src="../javascript/menu-button.js"></script>
 </body>
 
 </html>
