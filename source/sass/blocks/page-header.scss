@@ -29,12 +29,25 @@
   justify-content: space-around;
   align-items: center;
 
-  @media (min-width: $desktop-width) {
-    min-width: 202px;
-  }
-
   @media (min-width: $tablet-width) {
     min-width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 202px;
+    transform: scale(1.1);
+  }
+}
+
+.page-header__logo {
+  width: 34px;
+  height: 38px;
+  background: url("../img/cat-logo-mobile.svg") no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+    background: url("../img/cat-logo-full.svg") no-repeat;
   }
 }
 
@@ -45,10 +58,43 @@
 }
 
 .page-header__button {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 1.5px;
+  border: none;
+  background: $black;
+  box-shadow: 0px 7px $black, 0px -7px $black;
 
   @media (min-width: $tablet-width), (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.menu-opened.page-header__button {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  visibility: hidden;
+
+  @media (min-width: $tablet-width), (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.menu-opened.page-header__button::before,
+.menu-opened.page-header__button::after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  left: -20px;
+  width: 25px;
+  height: 2px;
+  background-color: $black;
+}
+
+.menu-opened.page-header__button::before {
+  transform: rotate(45deg);
+}
+
+.menu-opened.page-header__button::after {
+  transform: rotate(135deg);
 }

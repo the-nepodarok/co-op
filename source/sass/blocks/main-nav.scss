@@ -21,6 +21,11 @@
 
 .main-nav__item {
   padding: 20px 0;
+  border-top: 1px solid $border-grey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .main-nav--index  a {
