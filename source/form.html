@@ -20,7 +20,7 @@
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="main-nav__item"><a href="form.html">Подбор программы</a></li>
+          <li class="main-nav__item main-nav__item--active"><a href="form.html">Подбор программы</a></li>
         </ul>
       </div>
     </nav>
@@ -36,7 +36,7 @@
       <div class="order-form__cat-data">
       <fieldset class="order-form__cat-info">
         <label>
-          <span class="order-form__item-label">Имя:* </span>
+          <span class="order-form__item-label">Имя:*</span>
           <input type="text" required name="cat-name"></label>
         <label>
           <span class="order-form__item-label">Вес (кг):*</span>
@@ -48,31 +48,31 @@
 
       <fieldset class="order-form__cat-reason">
         <label>
-          <span class="order-form__item-label">Похудение</span>
           <input type="radio" name="radio-reason" value="loss-weight">
+          <span class="order-form__item-label order-form__item-label--radio">Похудение</span>
         </label>
 
         <label>
-          <span class="order-form__item-label">Набор массы</span>
           <input type="radio" name="radio-reason" value="gain-weight">
+          <span class="order-form__item-label order-form__item-label--radio">Набор массы</span>
         </label>
 
         <label>
-          <span class="order-form__item-label">Не знаю (Нужен ваш совет):</span>
-          <input type="radio" name="radio-reason" value="need help">
+          <input type="radio" name="radio-reason" value="gain-weight">
+          <span class="order-form__item-label order-form__item-label--radio">Не знаю (Нужен ваш совет):</span>
         </label>
       </fieldset>
       </div>
 
       <fieldset class="order-form__owner-info">
         <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-        <label class="order-form__owner-info-label">
+        <label class="order-form__owner-info-label  order-form__owner-info-label--email">
           <span class="order-form__item-label">E-mail:*</span>
           <input type="text" value="kuklachev@gmail.com" name="owner-mail" required>
         </label>
 
         <label class="order-form__owner-info-label">
-          <span class="order-form__item-label">Телефон:*</span>
+          <span class="order-form__item-label .order-form__icon--phone">Телефон:*</span>
           <input type="number" value="89609006090" required name="owner-phone">
         </label>
       </fieldset>
@@ -93,9 +93,11 @@
         <input type="checkbox" name="order-form__supplement--vitamins" id="vitamins">
           <label class="order-form__checkbox-label" for="vitamins">Витамины</label>
       </fieldset>
+      <div class="order-form__sumbit">
       <button class="order-form__submit-button button" type="submit">Отправить заявку</button>
       <small class="order-form__small-text"><sup>*</sup> - Обязательное поле</small>
-    </form>
+    </div>
+      </form>
   </section>
 
   <section class="address address--index address--catalog">
