@@ -32,13 +32,7 @@
   }
 }
 
-/* Global Form Rules */
-
-.order-form input[type="checkbox"] {
-    display: none;
-  }
-
-.order-form fieldset {
+form fieldset {
   padding: 0;
   margin-bottom: 25px;
   border: none;
@@ -53,23 +47,6 @@
   display: flex;
   column-gap: 2%;
 }
-
-.order-form input {
-  border: 1px solid $borderline-grey;
-}
-
-.order-form input[type="text"],
-.order-form input[type="number"] {
-  padding: 14px;
-  flex-grow: 1;
-}
-
-.order-form input::placeholder {
-  color: $dark-grey;
-  text-transform: uppercase;
-}
-
-/* Form Field Groups */
 
 .order-form__cat-data {
   margin-bottom: 20px;
@@ -213,6 +190,11 @@ input[type="radio"]:disabled + .order-form__item-label::after {
   flex-grow: 1;
   min-width: 280px;
   padding-top: 10px;
+}
+
+.order-form input::placeholder {
+  color: $dark-grey;
+  text-transform: uppercase;
 }
 
 .order-form__legend {
@@ -368,10 +350,10 @@ input[type="checkbox"]:disabled + .order-form__checkbox-label::after, {
 }
 
 .order-form__submit-button {
-  font-family: 'Oswald', sans-serif;
   padding: 7px 50px;
 
   @media (min-width: $tablet-width) {
+    font-family: 'Oswald', sans-serif;
     font-size: 20px;
     padding: 10px 58px;
     margin-right: 61px;
