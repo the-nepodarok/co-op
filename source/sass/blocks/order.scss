@@ -149,6 +149,7 @@ input[type="radio"]:disabled + .order-form__item-label::after {
 
 .order-form__owner-info {
   display: flex;
+  margin-bottom: 50px;
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
