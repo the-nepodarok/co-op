@@ -43,3 +43,9 @@
   line-height: 16px;
   padding-top: 15px;
 }
+
+.food-program-card__catalog-link a {
+  &:active {
+    opacity: 0.3;
+  }
+}

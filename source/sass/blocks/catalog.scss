@@ -162,6 +162,14 @@
     color: $dark-grey;
     font-weight: 400;
 
+    &:hover {
+      background-color: $super-special-grey;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+
     @media (min-width: $tablet-width) {
       padding: 9px 40px;
     }
