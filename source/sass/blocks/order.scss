@@ -319,7 +319,7 @@ input[type="checkbox"]:checked + .order-form__checkbox-label::after {
 
 
 input[type="checkbox"]:disabled + .order-form__checkbox-label,
-input[type="checkbox"]:disabled + .order-form__checkbox-label::after, {
+input[type="checkbox"]:disabled + .order-form__checkbox-label::after {
   opacity: 0.3;
 }
 
