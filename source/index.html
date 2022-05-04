@@ -39,40 +39,40 @@
     </nav>
   </header>
 
-<main>
-  <div class="picture-board">
-    <h2 class="picture-board__title">Функциональное <br>питание для котов</h2>
-    <p class="picture-board__desc">Занялся собой? Займись котом!</p>
-    <a href="form.html" class="picture-board__button button">Подобрать программу</a>
-    <div class="picture-board__image"></div>
-  </div>
+  <main>
+    <div class="picture-board">
+      <h2 class="picture-board__title">Функциональное <br>питание для котов</h2>
+      <p class="picture-board__desc">Занялся собой? Займись котом!</p>
+      <a href="form.html" class="picture-board__button button">Подобрать программу</a>
+      <div class="picture-board__image"></div>
+    </div>
 
-  <section class="food-program">
-    <h2 class="visually-hidden"></h2>
-    <div class="food-program-card">
-      <h3 class="food-program-card__title food-program-card__title--fitness">ПОХУДЕНИЕ</h2>
-        <div class="food-program-card__description">
-          Ваш кот весит больше собаки и почти
-          утратил способность лазить по деревьям?
-          Пора на диету! Cat Energy Slim поможет
-          вашему питомцу сбросить лишний вес.
-        </div>
-        <div class="food-program-card__catalog-name">
-          <a class="food-program-card__catalog-link" href="#">Каталог SLIM</a>
-        </div>
-    </div>
-    <div class="food-program-card">
-      <h3 class="food-program-card__title food-program-card__title--gaining">НАБОР МАССЫ</h2>
-        <div class="food-program-card__description">
-          Заработать авторитет среди дворовых котов
-          и даже собак? Серия Cat Energy Pro поможет
-          вашему коту нарастить необходимые мышцы!
-        </div>
-        <div class="food-program-card__catalog-name">
-          <a class="food-program-card__catalog-link" href="#">Каталог PRO</a>
-        </div>
-    </div>
-  </section>
+    <section class="food-program">
+      <h2 class="visually-hidden"></h2>
+      <div class="food-program-card">
+        <h3 class="food-program-card__title food-program-card__title--fitness">ПОХУДЕНИЕ</h2>
+          <div class="food-program-card__description">
+            Ваш кот весит больше собаки и почти
+            утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет
+            вашему питомцу сбросить лишний вес.
+          </div>
+          <div class="food-program-card__catalog-name">
+            <a class="food-program-card__catalog-link" href="#">Каталог SLIM</a>
+          </div>
+      </div>
+      <div class="food-program-card">
+        <h3 class="food-program-card__title food-program-card__title--gaining">НАБОР МАССЫ</h2>
+          <div class="food-program-card__description">
+            Заработать авторитет среди дворовых котов
+            и даже собак? Серия Cat Energy Pro поможет
+            вашему коту нарастить необходимые мышцы!
+          </div>
+          <div class="food-program-card__catalog-name">
+            <a class="food-program-card__catalog-link" href="#">Каталог PRO</a>
+          </div>
+      </div>
+    </section>
 
     <section class="about">
       <h3 class="about__title">Как это работает</h3>
@@ -110,8 +110,19 @@
         </div>
       </div>
       <div class="example-change__picture">
-        <img class="example-change--image" src="../../img/fat-cat.png" width="311" height="232"
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/fat-cat.png 1x, img/fat-cat@2x.png 2x" type="image/png">
+          <img class="example-change__image example-change__image--fat"
+          src="img/fat-cat-mobile.png"
+          srset="img/fat-cat-mobile.png 1x, img/fat-cat-mobile@2x.png 2x"
           alt="Ну очень толстый кот">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/skinny-cat.png 1x, img/skinny-cat@2x.png 2x" type="image/png">
+          <img class="example-change__image example-change__image--skinny" src="img/skinny-cat-mobile.png"
+          srset="img/skinny-cat-mobile.png 1x, img/skinny-cat-mobile@2x.png 2x"
+          alt="Похудевший кот после правильного питания">
+       </picture>
       </div>
       <div class="example-change__bar">
         <p class="example-change__desc example-change__desc--before">Было</p>
@@ -138,7 +149,9 @@
 
   <footer class="page-footer">
     <section class="page-footer__logo">
-      <a href="#"><img src="img/cat-energy-logo.svg" width="128" height="24"></a>
+      <a href="#">
+        <img src="img/cat-energy-logo.svg" width="128" height="24">
+      </a>
     </section>
     <section class="page-footer__socials">
       <a class="footer__socials footer__socials--vk" href="#"></a>
@@ -148,7 +161,7 @@
     <section class="page-footer__copyright">
       <a class="page-footer__copyright--academy" href="#">HTML Academy</a>
     </section>
-</footer>
+  </footer>
   <script src="../javascript/menu-button.js"></script>
 </body>
 
