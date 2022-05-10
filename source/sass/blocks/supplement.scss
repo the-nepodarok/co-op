@@ -159,6 +159,9 @@
 }
 
 .supplement-gift-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   width: 161px;
   padding-top: 58px;
@@ -180,7 +183,7 @@
     min-width: 648px;
     padding: 60px 30px;
     background-image: url("../img/gift-tablet.jpg");
-    display: flex;
+    flex-direction: row;
   }
 
   @media (min-width: $tablet-width) and (min-resolution: 2dpxx) {
@@ -197,7 +200,6 @@
     grid-row: 2/3;
     background-image: url("../img/gift-desktop.jpg");
     flex-direction: column;
-    align-items: center;
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dpxx) {
