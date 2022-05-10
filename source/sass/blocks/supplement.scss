@@ -42,6 +42,7 @@
   @media (min-width: $desktop-width) {
     width: 896px;
     grid-row: 2/3;
+    margin-bottom: 0;
   }
 }
 
@@ -66,7 +67,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0;
+    padding: 13px 0;
     margin: 0;
     align-items: center;
     border-left: none;
@@ -160,8 +161,7 @@
 .supplement-gift-offer {
   margin: 0;
   width: 161px;
-  height: 67px;
-  padding-top: 180px;
+  padding-top: 58px;
   padding-bottom: 43px;
   padding-right: 58px;
   padding-left: 61px;
@@ -178,7 +178,7 @@
   @media (min-width: $tablet-width) {
     height: auto;
     min-width: 648px;
-    padding: 70px 30px;
+    padding: 60px 30px;
     background-image: url("../img/gift-tablet.jpg");
     display: flex;
   }
@@ -188,41 +188,32 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
-    height: 67px;
-    padding-top: 180px;
-    padding-right: 43px;
+    padding-top: 56px;
     padding-bottom: 42px;
+    padding-right: 43px;
     padding-left: 41px;
     min-width: 161px;
     margin-bottom: 0;
     grid-row: 2/3;
     background-image: url("../img/gift-desktop.jpg");
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dpxx) {
     background-image: url("../img/gift-desktop@2x.jpg");
   }
+}
 
-  &::before {
-    content: "";
-    width: 78px;
-    height: 78px;
-    background-image: url("../img/icon_gift.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 20%;
-    right: 35%;
+.supplement-gift--icon {
+  margin-bottom: 43px;
 
-    @media (min-width: $tablet-width) {
-      left: 12%;
-      top: 28%;
-    }
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 
-    @media (min-width: $desktop-width) {
-    top: 20%;
-    left: 33%;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
   }
 }
 
@@ -240,6 +231,7 @@
     margin-right: 124px;
     max-width: 164px;
     text-align: left;
+    align-self: center;
   }
 
   @media (min-width: $tablet-width) {
@@ -247,6 +239,5 @@
     margin-right: 0;
     text-align: center;
   }
-
-
 }
+
