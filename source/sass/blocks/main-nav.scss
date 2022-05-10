@@ -18,6 +18,8 @@
 
   @media (min-width: $desktop-width) {
     min-width: 478px;
+    position: relative;
+    z-index: 0;
   }
 }
 
@@ -41,7 +43,6 @@
     }
   }
 }
-
 
 .main-nav--index a {
   @media (min-width: $desktop-width) {

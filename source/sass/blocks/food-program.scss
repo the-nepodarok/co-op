@@ -14,24 +14,49 @@
 }
 
 .food-program-card {
+  position: relative;
   width: 87.5%;
   padding: 6.25%;
   margin-bottom: 20px;
   font-family: "Oswald", sans-serif;
+  color: $dark-grey;
+  word-break: break-word;
   background-color: $footer-grey;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 6.9% 47px;
+    color: $black;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 39%;
-    min-height: 274px;
-    padding: 4.2%;
+    width: 40%;
+    padding: 5.4% 4.2% 4%;
   }
 }
 
 .food-program-card__title {
+  padding-left: 30%;
+  margin: 0;
+  margin-bottom: 24px;
   font: normal 24px "Oswald", sans-serif;
   line-height: 37px;
-  margin: 0;
-  margin-bottom: 21px;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    align-self: flex-start;
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    align-self: center;
+    margin-bottom: 70px;
+  }
 }
 
 .food-program-card__description {
@@ -39,15 +64,34 @@
   line-height: 18px;
   padding-bottom: 20px;
   border-bottom: 1px solid $borderline-grey;
+
+  @media (min-width: $tablet-width) {
+    max-width: 60%;
+    padding-bottom: 50px;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 85%;
+  }
 }
 
 .food-program-card__catalog-link {
   display: flex;
+  align-items: center;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
+  max-width: 60%;
   text-transform: uppercase;
-  line-height: 16px;
+  line-height: inherit;
   padding-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding-top: 0;
+  }
 }
 
 .food-program-card__catalog-link::before {
@@ -56,7 +100,6 @@
   align-self: center;
   width: 18px;
   height: 2px;
-  margin-top: 1px;
   margin-left: 15px;
   background: $black;
 }
@@ -64,12 +107,11 @@
 .food-program-card__catalog-link::after {
   content: "";
   order: 3;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 7px solid $black;
-  margin-top: 3.5px;
 }
 
 .food-program-card__catalog-name:hover .food-program-card__catalog-link::before {
@@ -80,4 +122,36 @@
 .food-program-card__catalog-name:active .food-program-card__catalog-link::before,
 .food-program-card__catalog-name:active .food-program-card__catalog-link::after {
   opacity: 0.3;
+}
+
+.food-program-card__icon--sitting,
+.food-program-card__icon--prowling {
+  position: absolute;
+  top: 5%;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 211px;
+    right: 7%;
+    top: 23%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 106px;
+    height: 100px;
+    left: 7%;
+    top: 10%;
+  }
+}
+
+.food-program-card__icon--prowling {
+  @media (min-width: $tablet-width) {
+    width: 290px;
+    right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    left: 4.5%;
+  }
 }

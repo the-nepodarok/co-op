@@ -357,7 +357,7 @@ input[type="checkbox"]:disabled + .order-form__checkbox-label::after {
 }
 
 .order-form__submit-button {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   padding: 7px 50px;
 
   @media (min-width: $tablet-width) {
