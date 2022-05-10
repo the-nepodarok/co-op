@@ -26,11 +26,51 @@
   padding: 0;
   font-size: 24px;
   line-height: 24px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
+    margin-left: 37px;
     margin-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  &::before {
+    content:'';
+
+    @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 2px;
+    background-color: $cat-green;
+    position: absolute;
+    left: -10%;
+    top: 55%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    left: -17%;
+  }
+  }
+
+  &::after {
+    content:'';
+    width: 53px;
+    height: 2px;
+    background-color: $cat-green;
+    position: absolute;
+    right: -7%;
+    top: 55%;
+
+    @media (min-width: $tablet-width) {
+      width: 328px;
+      right: -8%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 920px;
+      right: -50%;
+    }
   }
 }
 
