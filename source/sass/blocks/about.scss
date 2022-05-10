@@ -80,19 +80,36 @@
     height: 130px;
     margin: 0;
     padding-top: 151px;
+    background: url('../img/about/about-list--numbers.svg') no-repeat;
   }
+}
+
+.about__list__item--good {
+   background-position: -50% 0%;
 }
 
 .about__list__item--good::before {
   background-position: 50% -6%;
 }
 
+.about__list__item--simple {
+  background-position: 100% 0%;
+}
+
 .about__list__item--simple::before {
   background-position: 50% 30%;
 }
 
+.about__list__item--nutritious {
+  background-position: -45% 100%;
+}
+
 .about__list__item--nutritious::before {
   background-position: 50% 68.5%;
+}
+
+.about__list__item--fast {
+  background-position: 100% 100%;
 }
 
 .about__list__item--fast::before {
