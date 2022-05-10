@@ -26,11 +26,51 @@
   padding: 0;
   font-size: 24px;
   line-height: 24px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
+    margin-left: 37px;
     margin-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  &::before {
+    content:'';
+
+    @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 2px;
+    background-color: $cat-green;
+    position: absolute;
+    left: -10%;
+    top: 55%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    left: -17%;
+  }
+  }
+
+  &::after {
+    content:'';
+    width: 53px;
+    height: 2px;
+    background-color: $cat-green;
+    position: absolute;
+    right: -7%;
+    top: 55%;
+
+    @media (min-width: $tablet-width) {
+      width: 328px;
+      right: -8%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 920px;
+      right: -50%;
+    }
   }
 }
 
@@ -42,6 +82,7 @@
   @media (min-width: $desktop-width) {
     width: 896px;
     grid-row: 2/3;
+    margin-bottom: 0;
   }
 }
 
@@ -49,7 +90,9 @@
   display: flex;
   flex-direction: column;
   padding-top: 13px;
+  padding-bottom: 19px;
   margin-bottom: 13px;
+  border-bottom: 1px solid $special-grey;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -58,13 +101,23 @@
     padding-right: 38px;
     padding-bottom: 28px;
     padding-left: 38px;
+    margin-bottom: 0;
+    border-right: 1px solid $special-grey;
+    border-left: 1px solid $special-grey;
+    border-bottom: 1px solid $special-grey;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0;
+    padding: 13px 0;
     margin: 0;
     align-items: center;
+    border-left: none;
+    border-right: none;
   }
+}
+
+.supplement-list__item:first-child {
+  border-top: 1px solid $special-grey;
 }
 
 .supplement-list__table {
@@ -75,10 +128,7 @@
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
-
-  @media (min-width: $tablet-width) {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 
   @media (min-width: $desktop-width) {
     grid-column: 2/3;
@@ -96,7 +146,7 @@
   font-size: 16px;
   line-height: 16px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     margin: 0;
     font-size: 20px;
     line-height: 20px;
@@ -150,10 +200,12 @@
 }
 
 .supplement-gift-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   width: 161px;
-  height: 67px;
-  padding-top: 180px;
+  padding-top: 58px;
   padding-bottom: 43px;
   padding-right: 58px;
   padding-left: 61px;
@@ -163,32 +215,48 @@
   background-color: $cat-green;
   position: relative;
 
+  @media (min-resolution: 2dpxx) {
+    background-image: url("../img/gift-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     height: auto;
     min-width: 648px;
-    padding: 100px 30px;
+    padding: 60px 30px;
+    background-image: url("../img/gift-tablet.jpg");
+    flex-direction: row;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 2dpxx) {
+    background-image: url("../img/gift-tablet@2x.jpg");
   }
 
   @media (min-width: $desktop-width) {
-    height: 67px;
-    padding-top: 180px;
-    padding-right: 45px;
-    padding-bottom: 43px;
+    padding-top: 56px;
+    padding-bottom: 42px;
+    padding-right: 43px;
     padding-left: 41px;
     min-width: 161px;
     margin-bottom: 0;
     grid-row: 2/3;
+    background-image: url("../img/gift-desktop.jpg");
+    flex-direction: column;
   }
 
-  &::before {
-    content: "";
-    width: 78px;
-    height: 78px;
-    background-image: url("../img/icon-gift.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 58px;
-    right: 101px;
+  @media (min-width: $desktop-width) and (min-resolution: 2dpxx) {
+    background-image: url("../img/gift-desktop@2x.jpg");
+  }
+}
+
+.supplement-gift--icon {
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
   }
 }
 
@@ -200,4 +268,19 @@
   font-size: 16px;
   font-family: "Arial", sans-serif;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    margin-right: 124px;
+    max-width: 164px;
+    text-align: left;
+    align-self: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+  }
 }
+

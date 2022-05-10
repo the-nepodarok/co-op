@@ -3,6 +3,10 @@
 
 <head>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="viewport" content="width=device-width">
 </head>
 
@@ -114,6 +118,7 @@
     </section>
 
     <section class="example">
+
       <h2 class="example__title">Живой пример</h2>
       <p class="exampe__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
         Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
@@ -127,7 +132,9 @@
           <p class="example-calc__result">Затраты на питание: 15 000 руб.</p>
         </div>
       </div>
+      <div class="example-wrapper">
       <div class="example-change__picture">
+        <div class="example-change__area example-change__area--fat">
         <picture>
           <source media="(min-width: 768px)" srcset="img/fat-cat.png 1x, img/fat-cat@2x.png 2x" type="image/png">
           <img class="example-change__image example-change__image--fat"
@@ -135,6 +142,8 @@
           srset="img/fat-cat-mobile.png 1x, img/fat-cat-mobile@2x.png 2x"
           alt="Ну очень толстый кот">
         </picture>
+      </div>
+      <div class="example-change__area example-change__area--skinny">
         <picture>
           <source media="(min-width: 768px)" srcset="img/skinny-cat.png 1x, img/skinny-cat@2x.png 2x" type="image/png">
           <img class="example-change__image example-change__image--skinny" src="img/skinny-cat-mobile.png"
@@ -142,6 +151,8 @@
           alt="Похудевший кот после правильного питания">
         </picture>
       </div>
+      </div>
+    </div>
       <div class="example-change__bar">
         <p class="example-change__desc example-change__desc--before">Было</p>
         <div class="example-change__range">
@@ -150,7 +161,9 @@
           </div>
           <div class="example-change__toggle" tabindex="0" style="left: 50%"></div>
         </div>
+        <!-- <input id="difference" type="range" min="0" max="10" value="5" step="1">-->
         <p class="example-change__desc example-change__desc--after">Стало</p>
+      </div>
       </div>
     </section>
 
