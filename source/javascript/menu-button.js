@@ -8,7 +8,6 @@ function widthChange(width) {
   if (width.matches) {
     navMenu.classList.add('visually-hidden');
     menuButton.classList.remove('menu-opened');
-    alert('Mobile width!');
 
     menuButton.onclick = function() {
       navMenu.classList.toggle('visually-hidden');
