@@ -82,12 +82,12 @@
     height: 130px;
     margin: 0;
     padding-top: 151px;
-    background: url('../img/about/about-list--numbers.svg') no-repeat;
+    background: url("../img/about/about-list--numbers.svg") no-repeat;
   }
 }
 
 .about__list__item--good {
-   background-position: -50% 0%;
+  background-position: -50% 0%;
 }
 
 .about__list__item--good::before {

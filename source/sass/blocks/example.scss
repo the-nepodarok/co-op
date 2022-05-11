@@ -153,7 +153,6 @@
 }
 
 .example-change {
-
   @media (min-width: $tablet-width) {
     margin-bottom: 234px;
     padding-right: 20px;
@@ -165,18 +164,6 @@
     grid-column-start: 1;
     grid-column-end: 2;
     background-color: $bg-grey;
-  }
-}
-
-.example-change__picture {
-  margin-bottom: 23px;
-
-  @media (min-width: $desktop-width) {
-    min-height: 536px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
   }
 }
 
@@ -192,6 +179,10 @@
 
 .example-change__range {
   height: 12px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .example-change__bar {
@@ -237,7 +228,7 @@
 
 .example-change__scale__bar {
   height: 6px;
-  width: 30%;
+  width: 40%;
   background-color: $cat-green;
   border-radius: 6px;
   position: absolute;
@@ -248,6 +239,84 @@
     display: none;
   }
 }
+
+.example-change__scale__bar--skinny {
+  width: 100%;
+}
+
+.example-change__bar--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 428px;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+}
+
+.example-change__bar--tablet input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: $bg-grey;
+
+  &::-webkit-slider-runnable-track {
+    height: 7px;
+    border: none;
+    background-color: $special-grey;
+    border-radius: 6px;
+  }
+
+  &::-webkit-slider-thumb {
+    height: 34px;
+    width: 34px;
+    background-color: $cat-green;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px $special-grey;
+    position: relative;
+    top: -15px;
+    border: 13px solid $white-text;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    -webkit-appearance: none;
+  }
+
+  &::-moz-range-track {
+    height: 7px;
+    border: none;
+    background-color: $special-grey;
+    border-radius: 6px;
+  }
+
+  &::-moz-range-thumb {
+    height: 34px;
+    width: 34px;
+    background-color: $cat-green;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px $special-grey;
+    position: relative;
+    top: -15px;
+    border: 13px solid $white-text;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    -webkit-appearance: none;
+  }
+}
+
+
+.example-change__bar--tablet input::-ms-thumb {
+  height: 34px;
+  width: 34px;
+  background-color: $cat-green;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px $special-grey;
+  position: relative;
+  top: -15px;
+  border: 13px solid $white-text;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  -webkit-appearance: none;
+}
+
 
 .example-change__toggle {
   @media (min-width: $tablet-width) {
@@ -279,7 +348,6 @@
       top: 12px;
       left: 12px;
     }
-
   }
 }
 
@@ -287,10 +355,19 @@
   position: relative;
   overflow: hidden;
   height: 240px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-  max-width: 708px;
-  height: 520px;
+    max-width: 708px;
+    height: 520px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 536px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
 
@@ -307,29 +384,27 @@
 
 
   @media (min-width: $tablet-width) {
-  width: 380px;
+    width: 380px;
 
-  &--fat {
-    left: -2%;
+    &--fat {
+      left: -2%;
+    }
+
+    &--skinny {
+      z-index: 1;
+      left: 66%;
+    }
   }
 
-  &--skinny {
-    z-index: 1;
-    left: 66%;
+  @media (min-width: $desktop-width) {
+    &--fat {
+      left: -8%;
+    }
+
+    &--skinny {
+      left: 65%;
+    }
   }
-}
-
-@media (min-width: $desktop-width) {
-  &--fat {
-    left: -8%;
-  }
-
-  &--skinny {
-    left: 65%;
-  }
-}
-
-
 }
 
 .example-change__image {
@@ -337,26 +412,24 @@
 }
 
 .example-change__image--fat {
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-left: 10px;
   }
-
 }
 
 .example-change__image--skinny {
-
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-left: -250px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-left: -270px;
   }
 }
 
 
 .example-wrapper {
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     position: absolute;
     top: 35%;
     left: 10%;
@@ -364,9 +437,8 @@
     width: 520px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     left: 50%;
     top: 12%;
   }
-
 }
