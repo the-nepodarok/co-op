@@ -1,8 +1,8 @@
 .address {
-  padding-top: 66px;
+  padding-top: 28px;
 
-  &--catalog {
-    padding-top: 20px;
+  @media (min-width: $tablet-width) {
+    padding-top: 62px;
   }
 
   @media (min-width: $desktop-width) {
@@ -11,10 +11,19 @@
   }
 }
 
+.address--catalog,
+.address--form {
+  background-color: $footer-grey;
+}
+
 .address__block {
   display: grid;
   grid-template-columns: auto auto;
-  margin-bottom: 51px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -28,10 +37,6 @@
   }
 }
 
-.address--index {
-  background-color: $white-text;
-}
-
 .address__invite {
   margin-right: 15px;
   padding-left: 9.5%;
@@ -42,8 +47,12 @@
   text-transform: uppercase;
   color: $black;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
     line-height: 21px;
     padding: 0;
     margin-right: 87px;
@@ -69,13 +78,13 @@
 
   @media (min-width: $tablet-width) {
     text-align: end;
+    font-size: 16px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: start;
     padding: 0;
     justify-self: center;
-    font-size: 16px;
   }
 }
 
