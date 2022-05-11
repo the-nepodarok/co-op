@@ -26,6 +26,7 @@
   @media (min-width: $tablet-width) {
     padding-right: 20px;
     padding-left: 20px;
+    margin: 40px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -196,6 +197,7 @@
   &--after {
     @media (min-width: $tablet-width) {
       font-size: 20px;
+      border-bottom: 1px dotted $borderline-grey;
     }
   }
 }
@@ -217,7 +219,7 @@
 
   @media (min-width: $tablet-width) {
     background-color: $bg-grey;
-    padding-top: 410px;
+    padding-top: 413px;
     padding-bottom: 65px;
     justify-content: center;
     align-items: flex-end;
