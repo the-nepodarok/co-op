@@ -40,7 +40,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 }
 
@@ -76,53 +75,53 @@
 
 
 .catalog__item--more {
-    display: flex;
-    flex-direction: column;
-    padding-top: 77px;
-    position: relative;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 77px;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: auto;
+    padding-top: 138px;
+    padding-bottom: 40px;
+    background-color: $white-text;
+    border: 1px solid $special-grey;
+  }
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: $special-grey;
+    position: absolute;
+    top: 20%;
+    left: 45%;
 
     @media (min-width: $tablet-width) {
-      min-height: auto;
-      padding-top: 138px;
-      padding-bottom: 40px;
-      background-color: $white-text;
-      border: 1px solid $special-grey;
+      transform: scaleX(2);
+      top: 16%;
+      left: 46%;
     }
 
-    &::before {
-      content: "";
-      width: 30px;
-      height: 2px;
-      background-color: $special-grey;
-      position: absolute;
-      top: 20%;
-      left: 45%;
-
-      @media (min-width: $tablet-width) {
-        transform: scaleX(2);
-        top: 16%;
-        left: 46%;
-      }
-
-      @media (min-width: $desktop-width) {
-        left: 44%;
-      }
+    @media (min-width: $desktop-width) {
+      left: 44%;
     }
+  }
 
-    &::after {
-      content: "";
-      width: 2px;
-      height: 30px;
-      background-color: $special-grey;
-      position: absolute;
-      top: 13%;
-      left: 50%;
+  &::after {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: $special-grey;
+    position: absolute;
+    top: 13%;
+    left: 50%;
 
-      @media (min-width: $tablet-width) {
-        transform: scaleY(2);
-      }
+    @media (min-width: $tablet-width) {
+      transform: scaleY(2);
     }
+  }
 }
 
 .contain-table__item--second {
@@ -171,7 +170,6 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 23px;
       max-width: 135px;
-
     }
   }
 }
@@ -180,7 +178,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-bottom:21px;
+  margin-bottom: 21px;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -196,8 +194,6 @@
   &--bottom {
     margin-bottom: 21px;
     text-transform: none;
-
-
 
     @media (min-width: $tablet-width) {
       margin-bottom: 87px;
@@ -223,7 +219,7 @@
   font-family: "Oswald", sans-serif;
 
   @media (min-width: $desktop-width) {
-      padding: 10px 50px;
+    padding: 10px 50px;
   }
 
   &--show-all {
@@ -253,7 +249,7 @@
 
 .catalog__cell td {
   @media (min-width: $tablet-width) {
-  padding-top: 7px;
-  padding-bottom: 9px;
-}
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
 }

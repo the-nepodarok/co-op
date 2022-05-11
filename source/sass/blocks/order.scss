@@ -1,13 +1,15 @@
 .order {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     padding: 0 40px;
+    padding-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 95px;
+    padding-bottom: 82px;
   }
 }
 
@@ -261,11 +263,17 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   flex-direction: row;
   row-gap: 25px;
+  margin-bottom: 36px;
 
   input[type="checkbox"] {
     opacity: 0;
     z-index: -1;
     position: absolute;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+    row-gap: 33px;
   }
 
   @media (min-width: $desktop-width) {
@@ -329,6 +337,7 @@ input[type="checkbox"]:disabled + .order-form__checkbox-label::after {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   text-transform: none;
+  align-self: center;
 }
 
 
@@ -337,9 +346,18 @@ input[type="checkbox"]:disabled + .order-form__checkbox-label::after {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 12px;
+  top: 16px;
   right: 20px;
-  background-color: $special-grey;
+}
+
+.order-form__owner-info-label--email::before {
+  background: url("../img/icon-email.svg") no-repeat;
+}
+
+.order-form__owner-info-label--phone::before {
+  background: url("../img/icon-phone.svg") no-repeat;
+  top: 14px;
+  right: 16px;
 }
 
 .order-form__submit {
