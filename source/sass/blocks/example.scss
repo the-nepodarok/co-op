@@ -203,7 +203,8 @@
   &--after {
     @media (min-width: $tablet-width) {
       font-size: 20px;
-      border-bottom: 1px dotted $borderline-grey;
+      border-bottom: 2px dotted $special-grey;
+      padding-bottom: 5px;
     }
   }
 }
@@ -225,7 +226,7 @@
 
   @media (min-width: $tablet-width) {
     background-color: $bg-grey;
-    padding-top: 413px;
+    padding-top: 414px;
     padding-bottom: 65px;
     justify-content: center;
     align-items: flex-end;
@@ -280,8 +281,7 @@
   @media (min-width: $tablet-width) {
     display: block;
     width: 428px;
-    margin-left: 14px;
-    margin-right: 14px;
+    margin: 0 14px 6px;
   }
 }
 
