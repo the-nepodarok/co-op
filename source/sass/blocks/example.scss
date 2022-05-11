@@ -154,7 +154,6 @@
     grid-column-end: 4;
     text-align: end;
     font-size: 20px;
-    line-height: 20px;
     align-self: center;
     width: 180px;
     justify-self: end;
@@ -166,6 +165,13 @@
     text-align: left;
     width: auto;
     justify-self: start;
+    line-height: 20px;
+  }
+}
+
+.example-calc__price {
+  @media (min-width: $desktop-width) {
+    margin-left: 63px;
   }
 }
 
