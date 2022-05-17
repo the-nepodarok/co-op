@@ -9,7 +9,6 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
@@ -57,18 +56,6 @@ const server = (done) => {
 }
 
 exports.server = server;
-
-
-// Webp
-
-const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
-}
-
-exports.createWebp = createWebp;
-
 
 // Watcher
 
