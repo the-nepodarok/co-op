@@ -4,6 +4,13 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const imagemin = require("gulp-imagemin");
+const svgstore = require("gulp-svgstore");
+const del = require("del");
 const sync = require("browser-sync").create();
 const webp = require("gulp-webp");
 
@@ -24,6 +31,16 @@ const styles = () => {
 
 exports.styles = styles;
 
+// WebP
+
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+    .pipe(webp({quality: 90, alphaQuality: 90}))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.createWebp = createWebp;
+
 // Server
 
 const server = (done) => {
@@ -39,18 +56,6 @@ const server = (done) => {
 }
 
 exports.server = server;
-
-
-// Webp
-
-const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
-}
-
-exports.createWebp = createWebp;
-
 
 // Watcher
 
