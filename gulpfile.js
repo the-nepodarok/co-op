@@ -28,29 +28,29 @@ const styles = () => {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
 
-// HTML Min
+
+// HTML
 
 const htmlMin = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
-}
+};
+
 
 // Scripts
 
 const scriptsMin = () => {
   return gulp.src("source/js/**/*.js")
-    .pipe(terser())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
-}
-
-exports.scriptsMin = scriptsMin;
+  .pipe(terser())
+  .pipe(rename("script.min.js"))
+  .pipe(gulp.dest("build/js"))
+  .pipe(sync.stream());
+};
 
 // Images
 
@@ -61,27 +61,42 @@ const optimizeImages = () => {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.images = optimizeImages;
+    .pipe(gulp.dest("build/img"));
+};
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(gulp.dest("build/img"))
-}
+    .pipe(gulp.dest("build/img"));
+};
 
-exports.images = copyImages;
 
 // WebP
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90, alphaQuality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/img"));
 }
 
-exports.createWebp = createWebp;
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "source/img/**/*.svg",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+  done();
+};
+
+// Clean
+
+const clean = () => {
+  return del("build");
+};
 
 // Copy
 
@@ -117,24 +132,22 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
-
-// Reload
 
 const reload = (done) => {
   sync.reload();
   done();
-}
+};
 
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/*.js", gulp.series(scriptsMin))
+  gulp.watch("source/js/*.js", gulp.series(scriptsMin));
   gulp.watch("source/*.html", gulp.series(htmlMin, reload));
-}
+};
 
 // Build
 
@@ -164,8 +177,8 @@ exports.default = gulp.series(
     scriptsMin,
     createWebp
   ),
-  gulp.series(
+  gulp.series (
+    styles,
     server,
     watcher
-  )
-);
+  ));

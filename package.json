@@ -1,8 +1,8 @@
 {
-  "name": "CAT Energy",
-  "private": true,
-  "description": "Личный проект «CAT Energy» от HTML Academy",
-  "devDependencies": {
+    "name": "CAT Energy",
+    "private": true,
+    "description": "Личный проект «CAT Energy» от HTML Academy",
+    "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.5",
     "browser-sync": "2.26.14",
