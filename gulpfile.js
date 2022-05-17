@@ -98,28 +98,6 @@ const clean = () => {
   return del("build");
 };
 
-// Copy
-
-const copy = (done) => {
-  gulp.src([
-    "source/fonts/*.{woff2,woff}",
-    "source/*.ico",
-    "source/img/**/*.svg",
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("build"))
-  done();
-}
-
-exports.copy = copy;
-
-// Clean
-
-const clean = () => {
-  return del("build");
-}
-
 // Server
 
 const server = (done) => {
