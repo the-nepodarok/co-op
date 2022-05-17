@@ -37,7 +37,7 @@ exports.styles = styles;
 
 const htmlMin = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 };
 
