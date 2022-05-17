@@ -79,7 +79,7 @@
   @media (min-width: $desktop-width) {
     width: 880px;
     height: 694px;
-    background: url("../img/picture-board--desktop.png") 100%, url("../img/desktop-cat.png") 100% no-repeat;
+    background: 100% no-repeat url("../img/picture-board--desktop.webp"), 100% no-repeat url("../img/desktop-cat.webp");
     background-size: cover, contain;
     position: absolute;
     top: -205px;
@@ -91,7 +91,7 @@
 @media (min-resolution: 2dppx) {
   .picture-board__image {
     @media (min-width: $desktop-width) {
-      background: 100% no-repeat url("../img/picture-board--desktop@2x.png"), 100% no-repeat url("../img/desktop-cat@2x.png");
+      background: 100% no-repeat url("../img/picture-board--desktop@2x.webp"), 100% no-repeat url("../img/desktop-cat@2x.webp");
       background-size: cover, contain;
     }
   }
