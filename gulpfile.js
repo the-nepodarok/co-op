@@ -13,6 +13,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const webp = require("gulp-webp");
 
 // Styles
 
@@ -56,6 +57,18 @@ const server = (done) => {
 }
 
 exports.server = server;
+
+
+// Webp
+
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"))
+}
+
+exports.createWebp = createWebp;
+
 
 // Watcher
 

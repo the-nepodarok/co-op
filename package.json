@@ -21,7 +21,8 @@
     "postcss": "8.2.8",
     "postcss-csso": "5.0.1",
     "stylelint": "13.12.0",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-htmlacademy": "0.1.4",
+    "gulp-webp": "4.0.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -29,7 +30,8 @@
     "test": "npm run editorconfig && npm run stylelint",
     "webp": "createWebp",
     "build": "gulp styles",
-    "start": "gulp"
+    "start": "gulp",
+    "webp": "gulp createWebp"
   },
   "browserslist": [
     "last 2 versions",
