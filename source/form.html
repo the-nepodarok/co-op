@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
@@ -10,7 +11,7 @@
 </head>
 
 <body class="page__body">
-<header class="page-header">
+  <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <picture>
@@ -23,7 +24,8 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-text--full.svg">
           <source media="(min-width: 768px)" srcset="img/logo-text--full.svg">
-          <img src="img/logo-text--mobile.svg" class="page-header__logo-name cat-logo" width="101" height="18" alt="Логотип Cat Energy">
+          <img src="img/logo-text--mobile.svg" class="page-header__logo-name cat-logo" width="101" height="18"
+            alt="Логотип Cat Energy">
         </picture>
       </a>
       <button class="page-header__button menu-opened" type="button">
@@ -40,95 +42,95 @@
         </ul>
       </div>
     </nav>
-</header>
+  </header>
 
-<main>
-  <section class="order">
-    <form class="order-form" method="post">
-      <h2 class="order-form__title">Подбор программы</h2>
-      <p class="order-form__desc">Заполните анкету, и мы подберем
-        <br>программу питания для вашего кота</p>
+  <main>
+    <section class="order">
+      <form class="order-form" method="post">
+        <h2 class="order-form__title">Подбор программы</h2>
+        <p class="order-form__desc">Заполните анкету, и мы подберем
+          <br>программу питания для вашего кота</p>
 
-      <div class="order-form__cat-data">
-      <fieldset class="order-form__cat-info">
-        <label>
-          <span class="order-form__item-label">Имя:*</span>
-          <input type="text" required name="cat-name"></label>
-        <label>
-          <span class="order-form__item-label">Вес (кг):*</span>
-          <input type="number" value="7" required name="current-weight"></label>
-        <label>
-          <span class="order-form__item-label">Возраст (лет):</span>
-          <input type="number" value="7" name="age"></label>
-      </fieldset>
+        <div class="order-form__cat-data">
+          <fieldset class="order-form__cat-info">
+            <label>
+              <span class="order-form__item-label">Имя:*</span>
+              <input type="text" required name="cat-name"></label>
+            <label>
+              <span class="order-form__item-label">Вес (кг):*</span>
+              <input type="number" value="7" required name="current-weight"></label>
+            <label>
+              <span class="order-form__item-label">Возраст (лет):</span>
+              <input type="number" value="7" name="age"></label>
+          </fieldset>
 
-      <fieldset class="order-form__cat-reason">
-        <label>
-          <input type="radio" name="radio-reason" value="loss-weight">
-          <span class="order-form__item-label order-form__item-label--radio">Похудение</span>
-        </label>
+          <fieldset class="order-form__cat-reason">
+            <label>
+              <input type="radio" name="radio-reason" value="loss-weight">
+              <span class="order-form__item-label order-form__item-label--radio">Похудение</span>
+            </label>
 
-        <label>
-          <input type="radio" name="radio-reason" value="gain-weight">
-          <span class="order-form__item-label order-form__item-label--radio">Набор массы</span>
-        </label>
+            <label>
+              <input type="radio" name="radio-reason" value="gain-weight">
+              <span class="order-form__item-label order-form__item-label--radio">Набор массы</span>
+            </label>
 
-        <label>
-          <input type="radio" name="radio-reason" value="gain-weight">
-          <span class="order-form__item-label order-form__item-label--radio">Не знаю (Нужен ваш совет):</span>
-        </label>
-      </fieldset>
+            <label>
+              <input type="radio" name="radio-reason" value="gain-weight">
+              <span class="order-form__item-label order-form__item-label--radio">Не знаю (Нужен ваш совет):</span>
+            </label>
+          </fieldset>
+        </div>
+
+        <fieldset class="order-form__owner-info">
+          <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
+          <label class="order-form__owner-info-label  order-form__owner-info-label--email">
+            <span class="order-form__item-label">E-mail:*</span>
+            <input type="text" value="kuklachev@gmail.com" name="owner-mail" required>
+          </label>
+
+          <label class="order-form__owner-info-label order-form__owner-info-label--phone">
+            <span class="order-form__item-label">Телефон:*</span>
+            <input type="number" value="89609006090" required name="owner-phone">
+          </label>
+        </fieldset>
+
+        <fieldset class="order-form__comment">
+          <legend class="order-form__legend">Комментарий</legend>
+          <label><input type="textarea" name="order-form__comment" rows="6"></label>
+        </fieldset>
+
+        <fieldset class="order-form__supplement">
+          <legend class="order-form__legend">Дополнительно</legend>
+          <input type="checkbox" name="order-form__supplement--sweetener" id="sweetener" checked>
+          <label class="order-form__checkbox-label" for="sweetener">Сахарозаменитель</label>
+          <input type="checkbox" name="order-form__supplement--drinking-water" id="water">
+          <label class="order-form__checkbox-label" for="water">Питьевая вода</label>
+          <input type="checkbox" name="order-form__supplement--milk" id="milk">
+          <label class="order-form__checkbox-label" for="milk">Молоко</label>
+          <input type="checkbox" name="order-form__supplement--vitamins" id="vitamins">
+          <label class="order-form__checkbox-label" for="vitamins">Витамины</label>
+        </fieldset>
+        <div class="order-form__submit">
+          <button class="order-form__submit-button button" type="submit">Отправить заявку</button>
+          <small class="order-form__small-text"><sup>*</sup> - Обязательное поле</small>
+        </div>
+      </form>
+    </section>
+
+    <section class="address address--form">
+      <div class="address__block">
+        <div class="address__invite address__invite--catalog">Приглашаем <br>к сотрудничеству <br>дилеров!</div>
+        <div class="address__location">ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</div>
       </div>
 
-      <fieldset class="order-form__owner-info">
-        <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-        <label class="order-form__owner-info-label  order-form__owner-info-label--email">
-          <span class="order-form__item-label">E-mail:*</span>
-          <input type="text" value="kuklachev@gmail.com" name="owner-mail" required>
-        </label>
+      <div class="address__map">
+        <!--<img src="img/address-map.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
+      </div>
+    </section>
+  </main>
 
-        <label class="order-form__owner-info-label order-form__owner-info-label--phone">
-          <span class="order-form__item-label">Телефон:*</span>
-          <input type="number" value="89609006090" required name="owner-phone">
-        </label>
-      </fieldset>
-
-      <fieldset class="order-form__comment">
-        <legend class="order-form__legend">Комментарий</legend>
-        <label><input type="textarea" name="order-form__comment" rows="6"></label>
-      </fieldset>
-
-      <fieldset class="order-form__supplement">
-        <legend class="order-form__legend">Дополнительно</legend>
-        <input type="checkbox" name="order-form__supplement--sweetener" id="sweetener" checked>
-          <label class="order-form__checkbox-label" for="sweetener">Сахарозаменитель</label>
-        <input type="checkbox" name="order-form__supplement--drinking-water" id="water">
-          <label class="order-form__checkbox-label" for="water">Питьевая вода</label>
-        <input type="checkbox" name="order-form__supplement--milk" id="milk">
-          <label class="order-form__checkbox-label" for="milk">Молоко</label>
-        <input type="checkbox" name="order-form__supplement--vitamins" id="vitamins">
-          <label class="order-form__checkbox-label" for="vitamins">Витамины</label>
-      </fieldset>
-      <div class="order-form__submit">
-      <button class="order-form__submit-button button" type="submit">Отправить заявку</button>
-      <small class="order-form__small-text"><sup>*</sup> - Обязательное поле</small>
-    </div>
-      </form>
-  </section>
-
-  <section class="address address--form">
-    <div class="address__block">
-      <div class="address__invite address__invite--catalog">Приглашаем <br>к сотрудничеству <br>дилеров!</div>
-      <div class="address__location">ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</div>
-    </div>
-
-    <div class="address__map">
-      <!--<img src="img/address-map.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
-    </div>
-  </section>
-</main>
-
-<footer class="page-footer">
+  <footer class="page-footer">
     <section class="page-footer__logo">
       <a href="#"><img src="img/cat-energy-logo.svg" width="128" height="24"></a>
     </section>
@@ -142,7 +144,8 @@
     <section class="page-footer__copyright">
       <span class="page-footer__copyright--academy">HTML Academy</span>
     </section>
-</footer>
+  </footer>
   <script src="../javascript/menu-button.js"></script>
 </body>
+
 </html>
