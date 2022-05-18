@@ -156,7 +156,6 @@ exports.default = gulp.series(
     createWebp
   ),
   gulp.series (
-    styles,
     server,
     watcher
   ));
