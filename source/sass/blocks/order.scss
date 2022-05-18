@@ -1,5 +1,5 @@
 .order {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   padding-bottom: 32px;
 
@@ -367,7 +367,7 @@ input[type="checkbox"]:disabled + .order-form__checkbox-label::after {
 }
 
 .order-form__submit-button {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   padding: 7px 50px;
 
   @media (min-width: $tablet-width) {
@@ -377,7 +377,7 @@ input[type="checkbox"]:disabled + .order-form__checkbox-label::after {
   }
 
   @media (min-width: $desktop-width) {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 20px;
     padding: 12px 190px;
     margin-right: 81px;
