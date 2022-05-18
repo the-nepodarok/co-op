@@ -19,7 +19,7 @@
   width: 87.5%;
   padding: 6.25%;
   margin-bottom: 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: $dark-grey;
   word-break: break-word;
   background-color: $footer-grey;
@@ -82,7 +82,7 @@
 .food-program-card__catalog-link {
   display: flex;
   align-items: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   max-width: 60%;
   text-transform: uppercase;

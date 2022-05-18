@@ -1,5 +1,5 @@
 .supplement {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   padding-top: 25px;
   padding-bottom: 18px;
   padding-left: 20px;
@@ -187,7 +187,7 @@
   text-transform: uppercase;
   color: $white-text;
   border: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/3;
