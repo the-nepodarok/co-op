@@ -1,35 +1,98 @@
 .picture-board {
+  position: relative;
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
-  padding-top: 35px;
-  height: 480px;
-  width: 320px;
-  background-image: url("../img/group-9.jpg");
-  background-repeat: no-repeat;
+  padding-top: 25px;
+  max-width: 100%;
   text-align: center;
   color: $white-text;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+  background-image: url("../img/picture-board--mobile.png");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    min-height: 810px;
+    color: $black;
+    text-align: left;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 500px;
+  }
 }
 
 .picture-board__title {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
-  text-transform: uppercase;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 85px;
+  }
 }
 
 .picture-board__desc {
   padding: 0;
   margin: 0;
-  margin-bottom: 302px;
+  margin-bottom: 300px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding-left: 85px;
+  }
 }
 
 .picture-board__button {
   padding: 11px 45px;
+  margin-bottom: 15px;
   background-color: $cat-green;
   text-transform: uppercase;
   color: $white-text;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 85px;
+    top: 255px;
+  }
+}
+
+.picture-board__image {
+  display: none;
+  width: 709px;
+  height: 609px;
+  background: url("../img/picture-board--tablet.png") no-repeat;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 880px;
+    height: 694px;
+    background: 100% no-repeat url("../img/picture-board--desktop.png"), 100% no-repeat url("../img/desktop-cat.png");
+    background-size: cover, contain;
+    position: absolute;
+    top: -205px;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .picture-board__image {
+    @media (min-width: $desktop-width) {
+      background: 100% no-repeat url("../img/picture-board--desktop@2x.png"), 100% no-repeat url("../img/desktop-cat@2x.png");
+      background-size: cover, contain;
+    }
+  }
 }

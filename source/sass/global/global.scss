@@ -1,11 +1,43 @@
+.page__body {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding: 0 110px;
+  }
+}
+
+.button {
+  font-size: 16px;
+  color: $white-text;
+  text-transform: uppercase;
+  padding: 7px 40px;
+  background-color: $cat-green;
+  border: none;
+
+  &:hover {
+    background-color: $cat-super-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
 h1,
 h2,
 h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
 }
 
 a {
-  font-family: "Oswald", sans-serif;
   text-decoration: none;
   color: $black;
 }
@@ -21,4 +53,8 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.input:invalid {
+  border: $error-red;
 }

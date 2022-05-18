@@ -1,14 +1,107 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  padding: 30px 20px 23px 20px;
   background: $footer-grey;
-  font-family: "Oswald", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .page-footer__logo {
+  margin-bottom: 32px;
   width: 128px;
   height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__socials,
 .page-footer__copyright {
+  margin: 0;
+  padding: 0;
+  min-width: 280px;
+  font-family: "Arial", sans-serif;
+  color: $dark-grey;
   border-top: 1px solid $borderline-grey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.page-footer__socials {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  height: 63px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 129px;
+  }
+}
+
+.footer__socials {
+  display: inline-block;
+  width: 25px;
+  height: 22px;
+  background: url("../img/page-footer/social_icons--mobile.svg") no-repeat;
+  color: black;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/page-footer/social_icons.svg");
+  }
+}
+
+.footer__socials--vk {
+  background-position: 0%;
+}
+
+.footer__socials--in {
+  background-position: 54%;
+}
+
+.footer__socials--fb {
+  background-position: 102%;
+}
+
+.page-footer__copyright {
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    min-width: 163px;
+  }
+}
+
+.page-footer__copyright--academy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-around;
+  }
+}
+
+.page-footer__copyright--academy::after {
+  content: "";
+  width: 27px;
+  height: 34px;
+  background: url("../img/page-footer/academy-logo.svg") no-repeat;
 }

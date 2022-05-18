@@ -2,98 +2,154 @@
 <html class="page" lang="ru">
 
 <head>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <title>CAT Energy - Подбор программы</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body class="page__body">
-
-  <header class="page-header page-header--closed">
-    <a class="page-header__logo"><img src="" class="page-header__logo-image cat-logo" width="34" height="38"
-        alt="Логотип Cat Energy"></a>
-    <a class="page-header__logo"><img src="" class="page-header__logo-name cat-logo" width="101" height="18"
-        alt="Логотип Cat Energy"></a>
-    <h1 class="page-header__title visually-hidden">Cat Energy</h1>
-
-
-
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/cat-logo--full.svg">
+          <source media="(min-width: 768px)" srcset="img/cat-logo--full.svg">
+          <img src="img/cat-logo--mobile.svg" alt="Энергичный кот">
+        </picture>
+      </a>
+      <a class="page-header__logo-text" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-text--full.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-text--full.svg">
+          <img src="img/logo-text--mobile.svg" class="page-header__logo-name cat-logo" width="101" height="18"
+            alt="Логотип Cat Energy">
+        </picture>
+      </a>
+      <button class="page-header__button menu-opened" type="button">
+        <span class="visually-hidden">Закрыть меню навигации</span>
+      </button>
+      <h1 class="page-header__title visually-hidden">Cat Energy</h1>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню
-          навигации</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="main-nav__item"><a href="#">Подбор программы</a></li>
+          <li class="main-nav__item main-nav__item--active"><a href="form.html">Подбор программы</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <section class="order">
-    <form class="order-form" method="post">
-      <h2 class="order-form__title">Подбор программы</h2>
-      <p class="order-form__desc">Заполните анкету, и мы подберем
-        программу питания для вашего кота</p>
+  <main>
+    <section class="order">
+      <form class="order-form" method="post">
+        <h2 class="order-form__title">Подбор программы</h2>
+        <p class="order-form__desc">Заполните анкету, и мы подберем
+          <br>программу питания для вашего кота</p>
 
-      <fieldset class="order-form__cat-info">
-        <label>Имя:* <input type="text" required name="cat-name"></label>
-        <label>Вес (кг):* <input type="number" value="7" required name="current-weight"></label>
-        <label>Возраст (лет): <input type="number" value="7" name="age"></label>
-      </fieldset>
+        <div class="order-form__cat-data">
+          <fieldset class="order-form__cat-info">
+            <label>
+              <span class="order-form__item-label">Имя:*</span>
+              <input type="text" required name="cat-name"></label>
+            <label>
+              <span class="order-form__item-label">Вес (кг):*</span>
+              <input type="number" value="7" required name="current-weight"></label>
+            <label>
+              <span class="order-form__item-label">Возраст (лет):</span>
+              <input type="number" value="7" name="age"></label>
+          </fieldset>
 
-      <fieldset class="order-form__cat-reason">
-        <label>Похудение <input type="radio" name="radio-reason" value="loss-weight"></label>
-        <label>Набор массы <input type="radio" name="radio-reason" value="gain-weight"></label>
-        <label>Не знаю (Нужен ваш совет): <input type="radio" name="radio-reason" value="need help"></label>
-      </fieldset>
+          <fieldset class="order-form__cat-reason">
+            <label>
+              <input type="radio" name="radio-reason" value="loss-weight">
+              <span class="order-form__item-label order-form__item-label--radio">Похудение</span>
+            </label>
 
-      <fieldset class="order-form__owner-info">
-        <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
-        <label>E-mail:* <input type="text" value="kuklachev@gmail.com" name="owner-mail" required></label>
-        <label>Телефон:* <input type="number" value="89609006090" required name="owner-phone"></label>
-      </fieldset>
+            <label>
+              <input type="radio" name="radio-reason" value="gain-weight">
+              <span class="order-form__item-label order-form__item-label--radio">Набор массы</span>
+            </label>
 
-      <fieldset class="order-form__comment">
-        <legend class="order-form__legend">Комментарий</legend>
-        <label><input type="textarea" name="order-form__comment" rows="6"></label>
-      </fieldset>
+            <label>
+              <input type="radio" name="radio-reason" value="gain-weight">
+              <span class="order-form__item-label order-form__item-label--radio">Не знаю (Нужен ваш совет):</span>
+            </label>
+          </fieldset>
+        </div>
 
-      <fieldset class="order-form__supplement">
-        <legend class="order-form__legend">Дополнительно</legend>
-        <input type="checkbox" name="order-form__supplement--sweetener" checked></input>
-        <input type="checkbox" name="order-form__supplement--drinking-water"></input>
-        <input type="checkbox" name="order-form__supplement--milk"></input>
-        <input type="checkbox" name="order-form__supplement--vitamins"></input>
-      </fieldset>
+        <fieldset class="order-form__owner-info">
+          <legend class="order-form__legend">Контактные данные (владельца кота)</legend>
+          <label class="order-form__owner-info-label  order-form__owner-info-label--email">
+            <span class="order-form__item-label">E-mail:*</span>
+            <input type="text" value="kuklachev@gmail.com" name="owner-mail" required>
+          </label>
 
-      <button class="order-form__submit-button button" type="submit">Отправить заявку</button>
-      <small><sup>*</sup> - Обязательное поле</small>
-    </form>
-  </section>
+          <label class="order-form__owner-info-label order-form__owner-info-label--phone">
+            <span class="order-form__item-label">Телефон:*</span>
+            <input type="number" value="89609006090" required name="owner-phone">
+          </label>
+        </fieldset>
 
-  <footer class="page-footer">
-    <section class="address">
-      <div class="address__invite">Приглашаем к сотрудничеству дилеров!</div>
-      <div class="address__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
-      <div class="address__map">
-        <img src="???" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-      </div>
+        <fieldset class="order-form__comment">
+          <legend class="order-form__legend">Комментарий</legend>
+          <label><input type="textarea" name="order-form__comment" rows="6"></label>
+        </fieldset>
+
+        <fieldset class="order-form__supplement">
+          <legend class="order-form__legend">Дополнительно</legend>
+          <input type="checkbox" name="order-form__supplement--sweetener" id="sweetener" checked>
+          <label class="order-form__checkbox-label" for="sweetener">Сахарозаменитель</label>
+          <input type="checkbox" name="order-form__supplement--drinking-water" id="water">
+          <label class="order-form__checkbox-label" for="water">Питьевая вода</label>
+          <input type="checkbox" name="order-form__supplement--milk" id="milk">
+          <label class="order-form__checkbox-label" for="milk">Молоко</label>
+          <input type="checkbox" name="order-form__supplement--vitamins" id="vitamins">
+          <label class="order-form__checkbox-label" for="vitamins">Витамины</label>
+        </fieldset>
+        <div class="order-form__submit">
+          <button class="order-form__submit-button button" type="submit">Отправить заявку</button>
+          <small class="order-form__small-text"><sup>*</sup> - Обязательное поле</small>
+        </div>
+      </form>
     </section>
 
+    <section class="address address--form">
+      <div class="address__block">
+        <div class="address__invite address__invite--catalog">Приглашаем <br>к сотрудничеству <br>дилеров!</div>
+        <div class="address__location">ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</div>
+      </div>
+
+      <div class="address__map">
+        <!--<img src="img/address-map.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
     <section class="page-footer__logo">
       <a href="#"><img src="img/cat-energy-logo.svg" width="128" height="24"></a>
     </section>
 
-    <section class="page-footer__socials socials">
-      <a class="footer__socials_vk" href="#"></a>
-      <a class="footer__socials_in" href="#"></a>
-      <a class="footer__socials_fb" href="#"></a>
+    <section class="page-footer__socials">
+      <a class="footer__socials footer__socials--vk" href="#"></a>
+      <a class="footer__socials footer__socials--in" href="#"></a>
+      <a class="footer__socials footer__socials--fb" href="#"></a>
     </section>
 
-    <section class="page-footer__copyright copyright">
-      <span class="copyright__academy">HTML Academy</span>
+    <section class="page-footer__copyright">
+      <span class="page-footer__copyright--academy">HTML Academy</span>
     </section>
   </footer>
+  <script src="../js/script.min.js"></script>
 </body>
 
 </html>

@@ -1,21 +1,106 @@
-.address--index {
-  background-color: $white-text;
+.address {
+  padding-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    position: relative;
+  }
+}
+
+.address--catalog,
+.address--form {
+  background-color: $footer-grey;
+}
+
+.address__block {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    background-color: $white-text;
+    padding-top: 66px;
+    padding-right: 89px;
+    padding-bottom: 60px;
+    padding-left: 76px;
+    top: 95px;
+    left: 111px;
+  }
 }
 
 .address__invite {
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
+  margin-right: 15px;
+  padding-left: 9.5%;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 21px;
+    padding: 0;
+    margin-right: 87px;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      padding-left: 9%;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
+  }
 }
 
-.address__address {
+.address__location {
   font-family: "Arial", sans-serif;
-  font-weight: 400;
+  font-size: 14px;
   line-height: 20px;
   color: $dark-grey;
-  padding-left: 19px;
-  padding-bottom: 25px;
+  padding-right: 9.5%;
+
+  @media (min-width: $tablet-width) {
+    text-align: end;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    padding: 0;
+    justify-self: center;
+  }
+}
+
+.address__map {
+  min-height: 362px;
+  grid-column: 1 / -1;
+  background-image: url("../../img/address/map-small.png");
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+    display: grid;
+    background-image: url("../../img/address/map-mid-size.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    max-height: 100%;
+    background-image: url("../../img/address/map-wide.png");
+  }
 }
