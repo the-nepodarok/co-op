@@ -138,7 +138,7 @@ const build = gulp.series(
     htmlMin,
     scriptsMin,
     createWebp
-  ),
+  )
 );
 
 exports.build = build;
